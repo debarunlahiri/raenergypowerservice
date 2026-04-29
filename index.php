@@ -221,15 +221,17 @@ renderSiteStart(
                             <p>Formula</p>
                         </div>
                         <div class="approach-map">
-                            <article class="approach-node approach-1"><i class="bi bi-chat-square-text"></i><span>Listen</span></article>
-                            <article class="approach-node approach-2"><i class="bi bi-cpu"></i><span>Analyze</span></article>
-                            <article class="approach-node approach-3"><i class="bi bi-diagram-3"></i><span>Design &amp; Plan</span></article>
-                            <article class="approach-node approach-4"><i class="bi bi-clipboard-data"></i><span>Execute</span></article>
-                            <article class="approach-node approach-5"><i class="bi bi-gear-wide-connected"></i><span>Operate &amp; Maintain</span></article>
-                            <article class="approach-node approach-6"><i class="bi bi-headset"></i><span>Deliver &amp; Support</span></article>
-                            <div class="approach-core" aria-hidden="true">
-                                <i class="bi bi-lightbulb"></i>
+                            <div class="approach-core">
+                                <span class="eyebrow">Execution workflow</span>
+                                <h4>From site requirement to sustained plant support.</h4>
+                                <p>Each engagement moves through a clear field-tested sequence so scope, responsibility and delivery stay controlled.</p>
                             </div>
+                            <article class="approach-node approach-1"><i class="bi bi-chat-square-text"></i><span>Listen</span><p>Understand site priorities, constraints and expected outcomes.</p></article>
+                            <article class="approach-node approach-2"><i class="bi bi-cpu"></i><span>Analyze</span><p>Review plant conditions, manpower needs and technical risk.</p></article>
+                            <article class="approach-node approach-3"><i class="bi bi-diagram-3"></i><span>Design &amp; Plan</span><p>Define scope, schedule, supervision and reporting cadence.</p></article>
+                            <article class="approach-node approach-4"><i class="bi bi-clipboard-data"></i><span>Execute</span><p>Mobilize disciplined teams with accountable site coordination.</p></article>
+                            <article class="approach-node approach-5"><i class="bi bi-gear-wide-connected"></i><span>Operate &amp; Maintain</span><p>Keep equipment support consistent through practical routines.</p></article>
+                            <article class="approach-node approach-6"><i class="bi bi-headset"></i><span>Deliver &amp; Support</span><p>Close loops, support continuity and respond to changing needs.</p></article>
                         </div>
                     </div>
                 </div>

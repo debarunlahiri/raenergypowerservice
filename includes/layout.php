@@ -37,12 +37,13 @@ function renderSiteStart(array $company, string $activePage, string $pageTitle, 
                         },
                         colors: {
                             industrial: {
-                                ink: '#17202b',
-                                muted: '#5d6b7a',
-                                line: '#d8dee6',
+                                ink: '#152033',
+                                muted: '#647386',
+                                line: '#d6dee8',
                                 panel: '#ffffff',
-                                soft: '#f5f7fa',
-                                amber: '#c78314'
+                                soft: '#f6f8fb',
+                                teal: '#0f766e',
+                                blue: '#2563eb'
                             }
                         }
                     }

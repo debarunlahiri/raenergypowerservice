@@ -204,12 +204,7 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1rem;
-    }
-
-    .approach-map::before,
-    .approach-map::after,
-    .approach-core {
-        display: none;
+        padding-top: 0;
     }
 
     .approach-node {
@@ -218,6 +213,14 @@
         height: auto;
         min-height: 128px;
         border-radius: 8px;
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .approach-core {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        min-height: 280px;
     }
 
     .quality-service-visual {
@@ -287,6 +290,10 @@
     .values-map,
     .approach-map {
         grid-template-columns: 1fr;
+    }
+
+    .approach-core {
+        min-height: 240px;
     }
 
     .value-node {

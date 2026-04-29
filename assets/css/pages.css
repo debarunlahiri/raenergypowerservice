@@ -76,7 +76,7 @@
 
 .client-table tbody td {
     background: var(--panel);
-    color: #334155;
+    color: var(--text);
     line-height: 1.45;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .client-table tbody tr:hover td {
-    background: #eef2f6;
+    background: var(--panel-muted);
 }
 
 .team-card {
@@ -155,7 +155,7 @@
 .form-label {
     display: inline-block;
     margin-bottom: 0.5rem;
-    color: #334155;
+    color: var(--text);
     font-weight: 700;
 }
 
@@ -181,11 +181,11 @@ textarea.form-control {
 .form-select:focus {
     outline: none;
     border-color: var(--brand);
-    box-shadow: 0 0 0 3px rgba(199, 131, 20, 0.14);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
 }
 
 .form-control::placeholder {
-    color: #94a3b8;
+    color: #8a97a8;
 }
 
 .map-frame {
@@ -226,7 +226,7 @@ textarea.form-control {
     place-items: center;
     color: #ffffff;
     background: var(--brand);
-    box-shadow: 0 16px 28px rgba(16, 25, 35, 0.16);
+    box-shadow: 0 16px 28px rgba(17, 24, 39, 0.16);
     opacity: 0;
     transform: translateY(12px);
     pointer-events: none;
@@ -249,4 +249,3 @@ textarea.form-control {
     opacity: 1;
     transform: translateY(0);
 }
-
