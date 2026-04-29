@@ -1,19 +1,19 @@
 <?php
-function renderSiteStart(array $company, string $activePage, string $pageTitle, string $pageDescription): void
+require_once __DIR__ . '/icons.php';
+
+function e(string $value): string
 {
-    $styleFiles = [
+    return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}
+
+function render_site_start(array $company, array $navItems, string $activePage, string $title, string $description): void
+{
+    $stylesheets = [
         'assets/css/base.css',
-        'assets/css/home.css',
+        'assets/css/layout.css',
+        'assets/css/components.css',
         'assets/css/pages.css',
         'assets/css/responsive.css',
-    ];
-    $navItems = [
-        'home' => ['label' => 'Home', 'href' => 'index.php'],
-        'about' => ['label' => 'About', 'href' => 'about.php'],
-        'services' => ['label' => 'Services', 'href' => 'services.php'],
-        'clients' => ['label' => 'Clients', 'href' => 'clients.php'],
-        'team' => ['label' => 'Team', 'href' => 'team.php'],
-        'contact' => ['label' => 'Contact', 'href' => 'contact.php'],
     ];
     ?>
 <!doctype html>
@@ -21,133 +21,123 @@ function renderSiteStart(array $company, string $activePage, string $pageTitle, 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= htmlspecialchars($pageTitle) ?></title>
-    <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
+    <title><?= e($title) ?></title>
+    <meta name="description" content="<?= e($description) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script>
         tailwind = {
             config: {
                 theme: {
                     extend: {
-                        fontFamily: {
-                            sans: ['Inter', 'sans-serif'],
-                            display: ['Rajdhani', 'sans-serif']
-                        },
+                        fontFamily: { sans: ['Inter', 'sans-serif'] },
                         colors: {
-                            industrial: {
-                                ink: '#152033',
-                                muted: '#647386',
-                                line: '#d6dee8',
-                                panel: '#ffffff',
-                                soft: '#f6f8fb',
-                                teal: '#0f766e',
-                                blue: '#2563eb'
+                            brand: {
+                                ink: '#111827',
+                                muted: '#5b6472',
+                                line: '#d9e0e8',
+                                paper: '#ffffff',
+                                soft: '#f4f7fa',
+                                blue: '#174ea6',
+                                teal: '#00796b',
+                                amber: '#f2b705',
+                                red: '#c73e1d'
                             }
                         }
                     }
-                }
+                },
+                corePlugins: { gradientColorStops: false }
             }
         };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <?php foreach ($styleFiles as $styleFile): ?>
-        <?php $styleVersion = (string) filemtime(__DIR__ . '/../' . $styleFile); ?>
-        <link rel="stylesheet" href="<?= htmlspecialchars($styleFile) ?>?v=<?= htmlspecialchars($styleVersion) ?>">
+    <?php foreach ($stylesheets as $stylesheet): ?>
+        <link rel="stylesheet" href="<?= e($stylesheet) ?>?v=<?= (int) filemtime(__DIR__ . '/../' . $stylesheet) ?>">
     <?php endforeach; ?>
 </head>
-<body>
-    <div class="site-shell">
-        <header class="topbar py-2 border-bottom border-opacity-10">
-            <div class="container">
-                <div class="d-flex flex-column flex-lg-row justify-content-between gap-2 small text-uppercase topbar-text">
-                    <div class="d-flex flex-wrap gap-3">
-                        <span><i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($company['phone_india']) ?></span>
-                        <span><i class="bi bi-envelope-fill me-2"></i><?= htmlspecialchars($company['email']) ?></span>
-                    </div>
-                    <span><i class="bi bi-clock-fill me-2"></i><?= htmlspecialchars($company['hours']) ?></span>
-                </div>
-            </div>
-        </header>
-
-        <nav id="siteNav" class="navbar navbar-expand-lg sticky-top main-nav">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">
-                    <span class="brand-mark">RA</span>
-                    <span class="brand-copy">
-                        <strong>Energy Power Service</strong>
-                        <small>Industrial Operations Partner</small>
-                    </span>
-                </a>
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-lines" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                        <?php foreach ($navItems as $key => $item): ?>
-                            <li class="nav-item">
-                                <a class="nav-link<?= $activePage === $key ? ' active' : '' ?>" href="<?= htmlspecialchars($item['href']) ?>"><?= htmlspecialchars($item['label']) ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <a class="btn btn-warning nav-cta ms-lg-4 mt-3 mt-lg-0" href="contact.php">Request a Call</a>
-                </div>
-            </div>
-        </nav>
-        <div class="mobile-nav-backdrop" aria-hidden="true"></div>
-
-        <main>
-    <?php
-}
-
-function renderPageHero(string $eyebrow, string $title, string $copy): void
-{
-    ?>
-            <section class="page-hero">
-                <div class="container">
-                    <span class="eyebrow"><?= htmlspecialchars($eyebrow) ?></span>
-                    <h1 class="section-title"><?= htmlspecialchars($title) ?></h1>
-                    <p class="section-copy"><?= htmlspecialchars($copy) ?></p>
-                </div>
-            </section>
-    <?php
-}
-
-function renderSiteEnd(array $company): void
-{
-    $scriptVersion = (string) filemtime(__DIR__ . '/../assets/js/main.js');
-    ?>
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-7">
-                        <h2><?= htmlspecialchars($company['name']) ?></h2>
-                        <p>Industrial operation, maintenance, erection and utility support for power and process plants across India and Nepal.</p>
-                    </div>
-                    <div class="col-lg-5 text-lg-end">
-                        <a href="index.php" class="footer-link me-3">Home</a>
-                        <a href="mailto:<?= htmlspecialchars($company['email']) ?>" class="footer-link"><?= htmlspecialchars($company['email']) ?></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <button type="button" class="back-to-top" aria-label="Back to top">
-            <i class="bi bi-arrow-up"></i>
+<body class="page-<?= e($activePage) ?>">
+    <header class="site-header" data-header>
+        <a class="brand" href="index.php" aria-label="<?= e($company['name']) ?>">
+            <span class="brand-mark">RA</span>
+            <span>
+                <strong><?= e($company['short_name']) ?></strong>
+                <small>Power Service Pvt. Ltd.</small>
+            </span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
         </button>
-    </div>
+        <nav class="site-nav" data-nav>
+            <?php foreach ($navItems as $key => $item): ?>
+                <a class="<?= $activePage === $key ? 'is-active' : '' ?>" href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a>
+            <?php endforeach; ?>
+        </nav>
+        <a class="header-cta" href="tel:+919038028888">Request Call</a>
+    </header>
+    <main>
+    <?php
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js?v=<?= htmlspecialchars($scriptVersion) ?>"></script>
+function render_page_hero(string $eyebrow, string $title, string $copy): void
+{
+    ?>
+    <section class="page-hero reveal">
+        <div class="wrap">
+            <p class="eyebrow"><?= e($eyebrow) ?></p>
+            <h1><?= e($title) ?></h1>
+            <p><?= e($copy) ?></p>
+        </div>
+    </section>
+    <?php
+}
+
+function render_service_card(array $service): void
+{
+    ?>
+    <article class="service-card reveal">
+        <div class="icon-box"><?php render_icon($service['icon']); ?></div>
+        <h3><?= e($service['title']) ?></h3>
+        <p><?= e($service['summary']) ?></p>
+        <a href="services.php#<?= e($service['slug']) ?>">View scope</a>
+    </article>
+    <?php
+}
+
+function render_site_end(array $company, array $navItems): void
+{
+    ?>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2><?= e($company['name']) ?></h2>
+                <p class="footer-line"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span><?= e($company['tagline']) ?></span></p>
+                <div class="footer-contact">
+                    <a href="tel:+919038028888"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><?= e($company['phone_india']) ?></span></a>
+                    <a href="mailto:<?= e($company['email']) ?>"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span><?= e($company['email']) ?></span></a>
+                </div>
+            </div>
+            <div>
+                <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Offices</span></h3>
+                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong>Varanasi, India</strong><br><?= e($company['regional_office']) ?></span></p>
+                <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong>Nawalparasi, Nepal</strong><br><?= e($company['registered_office']) ?></span></p>
+            </div>
+            <div>
+                <h3><i class="fa-solid fa-link" aria-hidden="true"></i><span>Quick Links</span></h3>
+                <div class="footer-links">
+                    <?php foreach ($navItems as $item): ?>
+                        <a href="<?= e($item['href']) ?>"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span><?= e($item['label']) ?></span></a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-top" type="button" data-back-top aria-label="Back to top">↑</button>
+    <script src="assets/js/main.js?v=<?= (int) filemtime(__DIR__ . '/../assets/js/main.js') ?>"></script>
 </body>
 </html>
     <?php
 }
+?>

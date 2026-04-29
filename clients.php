@@ -2,68 +2,45 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-renderSiteStart(
-    $company,
-    'clients',
-    'Clients | ' . $company['name'],
-    'Clients page for R.A. Energy Power Service Pvt. Ltd. showing reference projects and client industries.'
-);
-renderPageHero(
-    'Client references',
-    'Selected industrial references across power, paper, cement, dairy, food and process sectors.',
-    'Client references are organized for quick review by industry, boiler maker and installed capacity.'
-);
+render_site_start($company, $navItems, 'clients', 'Clients | ' . $company['name'], 'Client references and boiler, turbine, and industrial plant service capacity table for R.A. Energy Power Service.');
+render_page_hero('Clients', 'Client references across boiler, turbine and industrial utility work.', 'A detailed record of completed and supported plant-side work across India and Nepal.');
 ?>
-            <section class="section-space">
-                <div class="container">
-                    <div class="row g-4 align-items-end mb-4">
-                        <div class="col-lg-7">
-                            <span class="eyebrow">Coverage</span>
-                            <h2 class="section-title">Industrial references across India and Nepal</h2>
-                            <p class="section-copy">Paper, cement, dairy, food and industrial processing references are already represented in the current content.</p>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="mini-cta">
-                                <strong>Reference overview</strong>
-                                <p>Review representative work by client, boiler maker, boiler capacity and turbine capacity.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php if ($clientLogos): ?>
-                        <div class="logo-marquee-wrap mb-5">
-                            <div class="logo-marquee-track">
-                                <?php foreach (array_merge($clientLogos, $clientLogos) as $index => $logo): ?>
-                                    <div class="logo-marquee-item">
-                                        <img src="<?= htmlspecialchars($logo) ?>" alt="Client logo <?= ($index % count($clientLogos)) + 1 ?>">
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <div class="table-responsive client-table-wrap">
-                        <table class="table align-middle client-table">
-                            <thead>
-                                <tr>
-                                    <th>Sr. Nos.</th>
-                                    <th>Client</th>
-                                    <th>Boiler Maker</th>
-                                    <th>Boiler Capacity</th>
-                                    <th>Turbine Capacity</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($clients as $client): ?>
-                                    <tr>
-                                        <td><?= htmlspecialchars($client['sr']) ?></td>
-                                        <td><?= htmlspecialchars($client['name']) ?></td>
-                                        <td><?= htmlspecialchars($client['maker']) ?></td>
-                                        <td><?= htmlspecialchars($client['boiler']) ?></td>
-                                        <td><?= htmlspecialchars($client['turbine']) ?></td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
+<section class="section clients-section">
+    <div class="wrap">
+        <div class="clients-table-card reveal">
+            <div class="clients-table-head">
+                <div>
+                    <p class="eyebrow">Client Data</p>
+                    <h2>Our Clients</h2>
                 </div>
-            </section>
-<?php renderSiteEnd($company); ?>
+                <p><?= count($clients) ?> listed references with boiler makers, boiler capacity and turbine capacity details.</p>
+            </div>
+
+            <div class="clients-table-scroll" role="region" aria-label="Client reference table" tabindex="0">
+                <table class="clients-table">
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Client Name</th>
+                            <th>Boiler Makers</th>
+                            <th>Boiler Capacity</th>
+                            <th>Turbine Capacity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($clients as $client): ?>
+                            <tr>
+                                <td><?= e($client['sr']) ?></td>
+                                <td><?= e($client['name']) ?></td>
+                                <td><?= e($client['maker']) ?></td>
+                                <td><?= e($client['boiler']) ?></td>
+                                <td><?= e($client['turbine']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<?php render_site_end($company, $navItems); ?>

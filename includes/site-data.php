@@ -1,6 +1,7 @@
 <?php
 $company = [
     'name' => 'R.A. Energy Power Service Pvt. Ltd.',
+    'short_name' => 'R.A. Energy',
     'tagline' => 'Operation, maintenance, erection and utility support for industrial power systems.',
     'phone_india' => '+91 9038028888',
     'phone_india_alt' => '+91 8527695761-70',
@@ -13,36 +14,151 @@ $company = [
     'hours' => 'Monday to Saturday, 9:00 AM to 6:00 PM',
 ];
 
+$navItems = [
+    'home' => ['label' => 'Home', 'href' => 'index.php'],
+    'about' => ['label' => 'About Us', 'href' => 'about.php'],
+    'services' => ['label' => 'Services', 'href' => 'services.php'],
+    'clients' => ['label' => 'Clients', 'href' => 'clients.php'],
+    'team' => ['label' => 'Our Team', 'href' => 'team.php'],
+    'gallery' => ['label' => 'Gallery', 'href' => 'gallery.php'],
+    'career' => ['label' => 'Career', 'href' => 'career.php'],
+];
+
+$metrics = [
+    ['value' => 500, 'suffix' => '+', 'label' => 'Projects Completed', 'icon' => 'fa-solid fa-clipboard-check'],
+    ['value' => 1000, 'suffix' => '+', 'label' => 'Working Employees', 'icon' => 'fa-solid fa-users-gear'],
+    ['value' => 100, 'suffix' => '+', 'label' => 'Qualified Engineers', 'icon' => 'fa-solid fa-user-gear'],
+    ['value' => 20, 'suffix' => '+', 'label' => 'Years Experience', 'icon' => 'fa-solid fa-calendar-check'],
+];
+
 $services = [
     [
-        'icon' => 'bi-gear-wide-connected',
-        'title' => 'Boiler & Turbine Operation',
-        'text' => 'IBR-certified operation support, parameter logging, safety checks, efficiency monitoring and disciplined shift execution.',
+        'slug' => 'boiler-turbine',
+        'icon' => 'i-gear',
+        'title' => 'Boiler & Turbine Operations',
+        'summary' => 'IBR-certified manpower, shift discipline, parameter logging, safety checks and efficiency monitoring.',
+        'points' => [
+            'Supply of I.B.R. certified boiler operators',
+            'Manufacturer-aligned boiler operation procedures',
+            'Daily logging of operating parameters',
+            'Safety and control checks',
+            'Boiler efficiency monitoring and logbook reporting',
+        ],
     ],
     [
-        'icon' => 'bi-tools',
-        'title' => 'Maintenance Services',
-        'text' => 'Routine, weekly, monthly and shutdown maintenance for boilers, turbines, pumps, controls and associated balance-of-plant systems.',
-    ],
-    [
-        'icon' => 'bi-building-gear',
+        'slug' => 'heavy-erection',
+        'icon' => 'i-crane',
         'title' => 'Heavy Erection',
-        'text' => 'Execution support for industrial erection scopes with manpower coordination, site discipline and structured supervision.',
+        'summary' => 'Industrial erection support for equipment, structures, plant utilities and field coordination.',
+        'points' => [
+            'Plant equipment installation support',
+            'Steel structure and access platform execution',
+            'Manpower planning and site supervision',
+            'Coordination with client engineering teams',
+            'Safety-led execution for live industrial environments',
+        ],
     ],
     [
-        'icon' => 'bi-droplet-half',
-        'title' => 'Water Treatment Solutions',
-        'text' => 'Complete utility-side water treatment support for stable plant operation, controlled chemical use and reliable output quality.',
+        'slug' => 'water-treatment',
+        'icon' => 'i-water',
+        'title' => 'Complete Water Treatment Solutions',
+        'summary' => 'Utility-side support that keeps water quality, chemical usage and operating continuity under control.',
+        'points' => [
+            'Water treatment operation support',
+            'Utility-side monitoring and reporting',
+            'Chemical dosing discipline',
+            'Process stability checks',
+            'Preventive care for connected utility equipment',
+        ],
+    ],
+    [
+        'slug' => 'project-management',
+        'icon' => 'i-plan',
+        'title' => 'Construction & Project Management',
+        'summary' => 'Practical project coordination, maintenance planning and site execution support for industrial clients.',
+        'points' => [
+            'New construction support',
+            'Renovation and restoration coordination',
+            'Shutdown and routine maintenance planning',
+            'Site reporting and progress tracking',
+            'Client coordination from mobilization to handover',
+        ],
     ],
 ];
 
-$reasons = [
-    'Strong network of associates, suppliers, customers and skilled manpower.',
-    'Wide range of services covering operation, maintenance and erection.',
-    'Quality-assured delivery with transparent business dealing.',
-    'Ethical business practices and time-bound execution.',
-    'Highly efficient employee base and responsive management team.',
-    'Long-term client relationships built around operational reliability.',
+$whyUs = [
+    ['icon' => 'i-team', 'title' => 'Skilled management team', 'text' => 'Experienced leadership and practical site supervision keep work controlled.'],
+    ['icon' => 'i-ethics', 'title' => 'Ethical business practices', 'text' => 'Transparent communication, accountable delivery and long-term relationships.'],
+    ['icon' => 'i-clock', 'title' => 'Time-bound services', 'text' => 'Execution is planned around uptime, safety and committed schedules.'],
+    ['icon' => 'i-network', 'title' => 'Strong industrial network', 'text' => 'Associates, suppliers, customers and skilled manpower across India and Nepal.'],
+];
+
+$qualityServices = [
+    [
+        'title' => 'Our Activities',
+        'icon' => 'fa-solid fa-helmet-safety',
+        'copy' => 'Please find below mentioned the activities that we intend to cover under the scope of execution of the operation contract.',
+        'lead' => 'Supply of I.B.R. certified boiler operator for operation of boiler',
+        'features' => [
+            'Boiler operation will be done as per instruction of manufacturer.',
+            'Recording of all necessary parameters.',
+            'Checking of all safeties and controls.',
+            'Monitoring of boiler efficiency.',
+            'Reporting through logbook.',
+        ],
+    ],
+    [
+        'title' => 'Construction Management',
+        'icon' => 'fa-solid fa-compass-drafting',
+        'copy' => 'General construction project support with practical coordination, manpower planning and site execution discipline.',
+        'lead' => 'We are builders of general construction projects including:',
+        'features' => [
+            'New Construction',
+            'Renovations',
+            'Historic Renovations and Restorations',
+            'Additions',
+            'Rebuilding from fire or water damage',
+        ],
+    ],
+    [
+        'title' => 'Power Plant Repairing & Service',
+        'icon' => 'fa-solid fa-industry',
+        'copy' => 'The vision at R.A Energy power services pvt ltd, is of highly trained and efficient team of operation & maintenance ready for anything that may occur and quick respond to clients’ needs concerns.',
+        'lead' => 'Features',
+        'features' => [
+            'New Construction',
+            'Renovations',
+            'Historic Renovations and Restorations',
+            'Additions',
+            'Rebuilding from fire or water damage',
+        ],
+    ],
+    [
+        'title' => 'Virtual Design & Build',
+        'icon' => 'fa-solid fa-screwdriver-wrench',
+        'copy' => 'Planning support for construction and service scopes with structured project review, coordination and execution readiness.',
+        'lead' => 'We are builders of general construction projects including:',
+        'features' => [
+            'New Construction',
+            'Renovations',
+            'Historic Renovations and Restorations',
+            'Additions',
+            'Rebuilding from fire or water damage',
+        ],
+    ],
+    [
+        'title' => 'Property Maintenance',
+        'icon' => 'fa-solid fa-gears',
+        'copy' => 'Maintenance support for industrial and project assets with responsive field teams and planned service routines.',
+        'lead' => 'We are builders of general construction projects including:',
+        'features' => [
+            'New Construction',
+            'Renovations',
+            'Historic Renovations and Restorations',
+            'Additions',
+            'Rebuilding from fire or water damage',
+        ],
+    ],
 ];
 
 $team = [
@@ -53,203 +169,61 @@ $team = [
 ];
 
 $clients = [
-    ['sr' => '1', 'name' => 'Shanti gopal concoct pvt. Ltd, chunar, up WHRB (4 Nos. boiler) single drum', 'maker' => 'CBL', 'boiler' => '11TPH,69kg/cm2', 'turbine' => '8 MW'],
-    ['sr' => '2', 'name' => 'SURAJ PRODUCT PVT. LTD. Rajgangpur odisa WHRB single drum boiler& single drum afbc', 'maker' => 'Cheema boiler', 'boiler' => '13 &15 TPH,69kg/cm2', 'turbine' => '8 MW'],
-    ['sr' => '3', 'name' => 'RLJ concoct pvt. Ltd, chunar, up WHRB single drum& single drum afbc boiler', 'maker' => 'CBL boiler', 'boiler' => '18 & 11 TPH,69kg/cm2', 'turbine' => '6.5 mw triveni'],
-    ['sr' => '4', 'name' => 'SARBOTTAM CEMENT .Ltd.(NAWALPARASI )NEPAL', 'maker' => 'Tharmex boiler', 'boiler' => '24 TPH / 68kg /cm2', 'turbine' => 'TRIWENI 5 MW'],
-    ['sr' => '5', 'name' => 'SUNSTR BIO-POLIC LTD BACHAU ,KUTCH GUJRAT', 'maker' => 'Tharmex boiler', 'boiler' => '25 TPH/65/kg/cm2', 'turbine' => '4 mw BHEL turbine'],
-    ['sr' => '6', 'name' => 'Om paper mill pvt. Ltd, hosur', 'maker' => 'Tharmex', 'boiler' => '10 TPH /10.5kg/cm2', 'turbine' => '-'],
-    ['sr' => '7', 'name' => 'Amul dairy pvt.Ltd.chanditala ,dankuni,hoogaly (W.B.)', 'maker' => 'IBL boiler', 'boiler' => '3+4 TPH /10.55kg/cm2', 'turbine' => '-'],
-    ['sr' => '8', 'name' => 'Debnath kagajudyog pvt.Ltd.khestiy abardhaman (W.B.)', 'maker' => 'IBL boiler', 'boiler' => '8 TPH /35/ kg/cm2', 'turbine' => 'IB TURBO /500 kw'],
-    ['sr' => '9', 'name' => 'Jagdhari paper mill, madhurantakam. chennai', 'maker' => 'IBL boiler', 'boiler' => '11TPH,69kg/cm2', 'turbine' => '810TPH / 10.55/kg/cm2'],
-    ['sr' => '10', 'name' => 'Bhadeswar rice mill Panagharhbardhaman(W.B.)', 'maker' => 'IBL boiler', 'boiler' => '6+15 TPH / 10.55 /kg/ cm2', 'turbine' => '-'],
-    ['sr' => '11', 'name' => 'Dipshikha paper pvt.Ltd.Mohanpurgiridih (Jharkhand)', 'maker' => 'Tharmex boiler', 'boiler' => '8 TPH / 17/kg/cm2', 'turbine' => '-'],
-    ['sr' => '12', 'name' => 'Pairamaunt rice mil l(Amta. Howrah)', 'maker' => 'IBL boiler', 'boiler' => '6TPH/ 35kg/cm2', 'turbine' => '-'],
-    ['sr' => '13', 'name' => 'ZerroErro construction pvt. Ltd (Begabad, giridih, jharkhand)', 'maker' => 'Tharmex boiler', 'boiler' => '6 TPH / 10.55 /kg /cm2', 'turbine' => '-'],
-    ['sr' => '14', 'name' => 'Suryansha paper pvt. Ltd, (Polambed, kavarpettayi, Chennai)', 'maker' => 'IBL boiler', 'boiler' => '12 TPH / 21 /kg /cm2', 'turbine' => '-'],
-    ['sr' => '15', 'name' => 'SENNAR PAPER MILL Pvt. Ltd(KAVARPETTAYI , CHENNAI)', 'maker' => 'IBL boiler &Tharmodine boiler', 'boiler' => '8 TPH / 14 / kg cm2 & 15 TPH / 45 /kg /cm2', 'turbine' => '2.2 MW'],
-    ['sr' => '16', 'name' => 'BALAJEE AGRO FOODS Pvt. Ltd (SANNDIL,RANCHI)', 'maker' => 'Tharmex boiler', 'boiler' => '6 TPH /10.55 kg /cm2', 'turbine' => '-'],
-    ['sr' => '17', 'name' => 'SWASTIK PULP AND PAPER MILL Pvt, Ltd (NASIK ROAD)', 'maker' => 'IBL boiler', 'boiler' => '22 TPH 35kg /cm2', 'turbine' => '-'],
-    ['sr' => '18', 'name' => 'S.R ITNTERNATIONL PAPER MILL Pvt. Ltd HALI SAHAR NAIHATI,KATAWA DEHARI,BIHAR)', 'maker' => 'IBL boiler', 'boiler' => '6 TPH/ 32kg/cm2', 'turbine' => 'IB Turbo 350 KW'],
-    ['sr' => '19', 'name' => 'GUPATA RICE MILL Pvt. Ltd (DEHARI,BIHAR)', 'maker' => 'Vesons boiler', 'boiler' => '5 TPH / 10.55 /kg /cm2', 'turbine' => '-'],
-    ['sr' => '20', 'name' => 'RAJRAJESHWARI PAPER MILL Pvt. Ltd (NASIK ROAD)', 'maker' => 'IBL boiler', 'boiler' => '12 TPH /35 kg /cm2', 'turbine' => 'IB Turbo 850 KW'],
-    ['sr' => '21', 'name' => 'RAJ BREWERY PVT. LTD PARASI,NEPAL', 'maker' => 'THERMAX BOILER', 'boiler' => '11TPH,69kg/cm2', 'turbine' => '-'],
-    ['sr' => '22', 'name' => 'Ten star food pvt.ltd (Nepal)', 'maker' => 'IBL boiler', 'boiler' => '5Tph/10kg/cm2', 'turbine' => '-'],
-    ['sr' => '23', 'name' => 'DHANLAXMI PEPAR Pvt.Ltd. (DONGARGAW RAJNAND GANWO) CHHATTISHGARH', 'maker' => 'CHIMA boiler', 'boiler' => '15 TPH / 10.55 /kg /cm2', 'turbine' => '-'],
+    ['sr' => '1', 'name' => 'Shanti Gopal Concoct Pvt. Ltd., Chunar, UP WHRB (4 Nos. boiler) single drum', 'maker' => 'CBL', 'boiler' => '11 TPH, 69 kg/cm2', 'turbine' => '8 MW'],
+    ['sr' => '2', 'name' => 'Suraj Product Pvt. Ltd., Rajgangpur Odisha WHRB single drum boiler & single drum AFBC', 'maker' => 'Cheema boiler', 'boiler' => '13 & 15 TPH, 69 kg/cm2', 'turbine' => '8 MW'],
+    ['sr' => '3', 'name' => 'RLJ Concoct Pvt. Ltd., Chunar, UP WHRB single drum & single drum AFBC boiler', 'maker' => 'CBL boiler', 'boiler' => '18 & 11 TPH, 69 kg/cm2', 'turbine' => '6.5 MW Triveni'],
+    ['sr' => '4', 'name' => 'Sarbottam Cement Ltd. (Nawalparasi) Nepal', 'maker' => 'Thermax boiler', 'boiler' => '24 TPH / 68 kg/cm2', 'turbine' => 'Triveni 5 MW'],
+    ['sr' => '5', 'name' => 'Sunstr Bio-Polic Ltd., Bachau, Kutch, Gujarat', 'maker' => 'Thermax boiler', 'boiler' => '25 TPH / 65 kg/cm2', 'turbine' => '4 MW BHEL turbine'],
+    ['sr' => '6', 'name' => 'Om Paper Mill Pvt. Ltd., Hosur', 'maker' => 'Thermax', 'boiler' => '10 TPH / 10.5 kg/cm2', 'turbine' => '-'],
+    ['sr' => '7', 'name' => 'Amul Dairy Pvt. Ltd., Chanditala, Dankuni, Hooghly (W.B.)', 'maker' => 'IBL boiler', 'boiler' => '3+4 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '8', 'name' => 'Debnath Kagajudyog Pvt. Ltd., Khestiy Abardhaman (W.B.)', 'maker' => 'IBL boiler', 'boiler' => '8 TPH / 35 kg/cm2', 'turbine' => 'IB Turbo / 500 KW'],
+    ['sr' => '9', 'name' => 'JagdharI Paper Mill, Madhurantakam, Chennai', 'maker' => 'IBL boiler', 'boiler' => '11 TPH, 69 kg/cm2', 'turbine' => '810 TPH / 10.55 kg/cm2'],
+    ['sr' => '10', 'name' => 'Bhadeswar Rice Mill, Panagarh Bardhaman (W.B.)', 'maker' => 'IBL boiler', 'boiler' => '6+15 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '11', 'name' => 'Dipshikha Paper Pvt. Ltd., Mohanpur Giridih (Jharkhand)', 'maker' => 'Thermax boiler', 'boiler' => '8 TPH / 17 kg/cm2', 'turbine' => '-'],
+    ['sr' => '12', 'name' => 'Pairamaunt Rice Mill (Amta, Howrah)', 'maker' => 'IBL boiler', 'boiler' => '6 TPH / 35 kg/cm2', 'turbine' => '-'],
+    ['sr' => '13', 'name' => 'ZerroErro Construction Pvt. Ltd. (Begabad, Giridih, Jharkhand)', 'maker' => 'Thermax boiler', 'boiler' => '6 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '14', 'name' => 'Suryansha Paper Pvt. Ltd. (Polambed, Kavarpettayi, Chennai)', 'maker' => 'IBL boiler', 'boiler' => '12 TPH / 21 kg/cm2', 'turbine' => '-'],
+    ['sr' => '15', 'name' => 'Sennar Paper Mill Pvt. Ltd. (Kavarpettayi, Chennai)', 'maker' => 'IBL boiler & Thermodyne boiler', 'boiler' => '8 TPH / 14 kg/cm2 & 15 TPH / 45 kg/cm2', 'turbine' => '2.2 MW'],
+    ['sr' => '16', 'name' => 'Balajee Agro Foods Pvt. Ltd. (Sanndil, Ranchi)', 'maker' => 'Thermax boiler', 'boiler' => '6 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '17', 'name' => 'Swastik Pulp and Paper Mill Pvt. Ltd. (Nasik Road)', 'maker' => 'IBL boiler', 'boiler' => '22 TPH / 35 kg/cm2', 'turbine' => '-'],
+    ['sr' => '18', 'name' => 'S.R International Paper Mill Pvt. Ltd., Hali Sahar, Naihati, Katawa, Dehari, Bihar', 'maker' => 'IBL boiler', 'boiler' => '6 TPH / 32 kg/cm2', 'turbine' => 'IB Turbo 350 KW'],
+    ['sr' => '19', 'name' => 'Gupata Rice Mill Pvt. Ltd. (Dehari, Bihar)', 'maker' => 'Vesons boiler', 'boiler' => '5 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '20', 'name' => 'Rajrajeshwari Paper Mill Pvt. Ltd. (Nasik Road)', 'maker' => 'IBL boiler', 'boiler' => '12 TPH / 35 kg/cm2', 'turbine' => 'IB Turbo 850 KW'],
+    ['sr' => '21', 'name' => 'Raj Brewery Pvt. Ltd., Parasi, Nepal', 'maker' => 'Thermax boiler', 'boiler' => '11 TPH, 69 kg/cm2', 'turbine' => '-'],
+    ['sr' => '22', 'name' => 'Ten Star Food Pvt. Ltd. (Nepal)', 'maker' => 'IBL boiler', 'boiler' => '5 TPH / 10 kg/cm2', 'turbine' => '-'],
+    ['sr' => '23', 'name' => 'Dhanlaxmi Pepar Pvt. Ltd. (Dongargaw Rajnand Ganwo) Chhattisgarh', 'maker' => 'Chima boiler', 'boiler' => '15 TPH / 10.55 kg/cm2', 'turbine' => '-'],
 ];
 
-$clientLogos = glob(__DIR__ . '/../assets/images/clients/*.{jpg,jpeg,png,webp,svg}', GLOB_BRACE) ?: [];
-sort($clientLogos);
-$clientLogos = array_map(
-    static fn ($path) => 'assets/images/clients/' . basename($path),
-    $clientLogos
-);
+function asset_list(string $folder): array
+{
+    $paths = glob(__DIR__ . '/../' . $folder . '/*.{jpg,jpeg,png,webp}', GLOB_BRACE) ?: [];
+    sort($paths, SORT_NATURAL);
 
-$galleryImages = glob(__DIR__ . '/../assets/images/gallery/*.{jpg,jpeg,png,webp}', GLOB_BRACE) ?: [];
-sort($galleryImages, SORT_NATURAL);
-$galleryImages = array_map(
-    static fn ($path) => 'assets/images/gallery/' . basename($path),
-    $galleryImages
-);
-
-$projectImages = glob(__DIR__ . '/../assets/images/projects/*.{jpg,jpeg,png,webp}', GLOB_BRACE) ?: [];
-sort($projectImages, SORT_NATURAL);
-$projectImages = array_map(
-    static fn ($path) => 'assets/images/projects/' . basename($path),
-    $projectImages
-);
-
-$carouselContent = [
-    [
-        'eyebrow' => 'Plant operations',
-        'title' => 'Disciplined support for high-uptime boiler and turbine environments',
-        'text' => 'Operations teams, reporting discipline and monitoring support aligned to continuous industrial production.',
-    ],
-    [
-        'eyebrow' => 'Maintenance planning',
-        'title' => 'Routine, shutdown and utility-side maintenance with site-ready execution',
-        'text' => 'Structured maintenance coverage for boilers, pumps, fans, controls and utility systems.',
-    ],
-    [
-        'eyebrow' => 'Heavy erection',
-        'title' => 'Industrial erection support backed by experienced field coordination',
-        'text' => 'Practical execution support for plant equipment installation, supervision and manpower organization.',
-    ],
-    [
-        'eyebrow' => 'Utility systems',
-        'title' => 'Reliable water treatment and utility-side support for continuous output',
-        'text' => 'Utility support structured around stable plant conditions, operational readiness and dependable site performance.',
-    ],
-];
-
-$carouselSlides = [];
-foreach (array_slice($galleryImages, 0, 4) as $index => $image) {
-    $content = $carouselContent[$index % count($carouselContent)];
-    $carouselSlides[] = [
-        'image' => $image,
-        'eyebrow' => $content['eyebrow'],
-        'title' => $content['title'],
-        'text' => $content['text'],
-    ];
+    return array_map(static fn ($path) => $folder . '/' . basename($path), $paths);
 }
 
-$projects = [
-    [
-        'category' => 'Erection',
-        'title' => 'Boiler & Steel Structures',
-        'text' => 'Field-ready erection support for major plant-side equipment and access structures.',
-        'image' => $projectImages[0] ?? 'assets/images/hero.jpg',
-    ],
-    [
-        'category' => 'Operations',
-        'title' => 'Boiler Operations',
-        'text' => 'On-site operational support aligned to monitored boiler performance and shift discipline.',
-        'image' => $projectImages[1] ?? 'assets/images/2.jpg',
-    ],
-    [
-        'category' => 'Installation',
-        'title' => 'Plant Installation',
-        'text' => 'Execution manpower and supervision support for industrial installation scopes.',
-        'image' => $projectImages[2] ?? 'assets/images/image_bg.jpg',
-    ],
-    [
-        'category' => 'Maintenance',
-        'title' => 'Mechanical Maintenance',
-        'text' => 'Shutdown and routine maintenance assistance across process-linked plant areas.',
-        'image' => $projectImages[3] ?? 'assets/images/hero.jpg',
-    ],
-    [
-        'category' => 'Utilities',
-        'title' => 'Utility Support Systems',
-        'text' => 'Support for connected utility systems that keep plant operations stable and continuous.',
-        'image' => $projectImages[4] ?? 'assets/images/2.jpg',
-    ],
-];
+$galleryImages = asset_list('assets/images/gallery');
+$projectImages = asset_list('assets/images/projects');
+$clientLogos = asset_list('assets/images/clients');
 
-$qualityServices = [
+$heroSlides = [
     [
-        'slug' => 'activities',
-        'label' => 'Our Activities',
-        'icon' => 'bi-person-workspace',
-        'title' => 'Our Activities',
-        'copy' => 'Please Find below mentioned the activities that we intend to cover under the scope of execution of the operation contract.',
-        'lead' => 'Supply of I.B.R. Certified boiler operator for operation of boiler',
-        'items' => [
-            'Boiler operation will be done as per instruction of manufacturer.',
-            'Recording of all necessary parameters.',
-            'Checking of all safeties and controls.',
-            'Monitoring of boiler efficiency.',
-            'Reporting thorough logbook.',
-        ],
-        'button' => ['label' => 'View Details', 'href' => 'services.php'],
-        'image' => 'assets/images/2.jpg',
+        'image' => $galleryImages[0] ?? 'assets/images/hero.jpg',
+        'eyebrow' => 'Plant Operations',
+        'title' => 'Complete Operation & Maintenance of Power Plants',
+        'text' => 'Disciplined teams for boiler, turbine and utility systems across continuous industrial environments.',
     ],
     [
-        'slug' => 'construction-management',
-        'label' => 'Construction Management',
-        'icon' => 'bi-gear-wide-connected',
-        'title' => 'Construction Management',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim veniam, quised nostrud exercitation. Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        'lead' => 'We are builders of general construction projects including:',
-        'items' => [
-            'New Construction',
-            'Renovations',
-            'Historic Renovations and Restorations',
-            'Additions',
-            'Rebuilding from fire or water damage',
-        ],
-        'button' => ['label' => 'View Details', 'href' => 'services.php'],
-        'image' => 'assets/images/2.jpg',
+        'image' => $galleryImages[1] ?? 'assets/images/2.jpg',
+        'eyebrow' => 'Industrial Execution',
+        'title' => 'Heavy Erection with Site-Ready Supervision',
+        'text' => 'Equipment, structure and utility-side erection support backed by practical field coordination.',
     ],
     [
-        'slug' => 'project-management',
-        'label' => 'Project Managment',
-        'icon' => 'bi-clipboard2-check',
-        'title' => 'Power Plant Reparing & Service',
-        'copy' => 'The vision at R.A Energy power services pvt ltd, is of highly trained and efficient team of operation & maintenance ready for anything that may occur and quick respond to clients’ needs concerns.',
-        'lead' => 'Features',
-        'items' => [
-            'New Construction',
-            'Renovations',
-            'Historic Renovations and Restorations',
-            'Additions',
-            'Rebuilding from fire or water damage',
-        ],
-        'button' => ['label' => 'View Details', 'href' => 'services.php'],
-        'image' => 'assets/images/2.jpg',
-    ],
-    [
-        'slug' => 'virtual-design',
-        'label' => 'Virtual Design & Build',
-        'icon' => 'bi-tools',
-        'title' => 'Virtual Design & Build',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim veniam, quised nostrud exercitation. Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        'lead' => 'We are builders of general construction projects including:',
-        'items' => [
-            'New Construction',
-            'Renovations',
-            'Historic Renovations and Restorations',
-            'Additions',
-            'Rebuilding from fire or water damage',
-        ],
-        'button' => ['label' => 'View Details', 'href' => 'services.php'],
-        'image' => 'assets/images/2.jpg',
-    ],
-    [
-        'slug' => 'property-maintenance',
-        'label' => 'Property Maintenance',
-        'icon' => 'bi-wrench-adjustable-circle',
-        'title' => 'Property Maintenance',
-        'copy' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim veniam, quised nostrud exercitation. Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        'lead' => 'We are builders of general construction projects including:',
-        'items' => [
-            'New Construction',
-            'Renovations',
-            'Historic Renovations and Restorations',
-            'Additions',
-            'Rebuilding from fire or water damage',
-        ],
-        'button' => ['label' => 'View Details', 'href' => 'services.php'],
-        'image' => 'assets/images/2.jpg',
+        'image' => $galleryImages[2] ?? 'assets/images/image_bg.jpg',
+        'eyebrow' => 'Utility Systems',
+        'title' => 'Water Treatment Support for Reliable Output',
+        'text' => 'Monitoring, chemical discipline and operating routines for dependable plant-side utilities.',
     ],
 ];
+?>

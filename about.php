@@ -2,104 +2,49 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-renderSiteStart(
-    $company,
-    'about',
-    'About | ' . $company['name'],
-    'About page for R.A. Energy Power Service Pvt. Ltd. covering company background, mission, vision and operating profile.'
-);
-renderPageHero(
-    'About the business',
-    'A contract and industrial services company focused on practical power plant execution.',
-    'R.A. Energy Power Service was established in India in 2006 and later registered in Nepal in 2017, serving industrial clients with operation, maintenance, heavy erection and water treatment support.'
-);
+render_site_start($company, $navItems, 'about', 'About Us | ' . $company['name'], 'History, vision and operating philosophy of R.A. Energy Power Service.');
+render_page_hero('About Us', 'A trained, efficient team for industrial operation and maintenance.', 'Our work is shaped around reliable site execution, quick response to client needs and a practical understanding of power plant environments.');
 ?>
-            <section class="section-space section-dark">
-                <div class="container">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-5">
-                            <div class="stacked-panels">
-                                <div class="stack-card accent-card">
-                                    <span class="kicker">Company profile</span>
-                                    <h2><?= htmlspecialchars($company['name']) ?></h2>
-                                    <p><?= htmlspecialchars($company['tagline']) ?></p>
-                                </div>
-                                <div class="stack-card">
-                                    <h3>Mission</h3>
-                                    <p>Provide high-quality, affordable contract solutions, respond quickly to changing client needs, build long-term relationships and improve service delivery continuously.</p>
-                                </div>
-                                <div class="stack-card">
-                                    <h3>Vision</h3>
-                                    <p>Maintain a highly trained and efficient operation and maintenance team that is ready for site realities and quick in response to client concerns.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <span class="eyebrow">Company highlights</span>
-                            <h2 class="section-title">Built around field execution, operational discipline and long-term industrial support.</h2>
-                            <p class="section-copy">
-                                R.A. Energy Power Service is structured around practical site execution, trained manpower, responsive supervision and long-term support for industrial plant operations.
-                            </p>
-                            <div class="row g-4 mt-2">
-                                <div class="col-md-6">
-                                    <div class="info-card">
-                                        <span class="info-label">Founded</span>
-                                        <strong><?= htmlspecialchars($company['founded']) ?></strong>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="info-card">
-                                        <span class="info-label">Registered in Nepal</span>
-                                        <strong><?= htmlspecialchars($company['nepal_registration']) ?></strong>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="info-card">
-                                        <span class="info-label">Working hours</span>
-                                        <strong><?= htmlspecialchars($company['hours']) ?></strong>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="info-card">
-                                        <span class="info-label">Reach</span>
-                                        <strong>India and Nepal industrial sites</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="process-strip mt-4">
-                                <div><span>01</span> Operate</div>
-                                <div><span>02</span> Maintain</div>
-                                <div><span>03</span> Erect</div>
-                                <div><span>04</span> Support utilities</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<section class="section">
+    <div class="wrap split">
+        <div class="reveal">
+            <p class="eyebrow">History</p>
+            <h2>Serving industrial power environments since 2006.</h2>
+            <p>R.A. Energy Power Service began in India with a focused goal: create dependable field teams for power plant operation, maintenance and erection scopes. The company registered in Nepal in 2017 to support a wider industrial base.</p>
+            <p>Our methodology is direct: understand the site requirement, plan manpower and supervision, execute with clear reporting, and keep plant continuity at the center of every decision.</p>
+        </div>
+        <div class="info-stack reveal">
+            <article><strong>Mission</strong><span>Train capable teams and deliver dependable industrial execution.</span></article>
+            <article><strong>Vision</strong><span>Become a trusted professional partner for value-minded clients.</span></article>
+            <article><strong>Philosophy</strong><span>Advanced, reliable and cost-effective support with safety first.</span></article>
+        </div>
+    </div>
+</section>
 
-            <section class="section-space section-grid">
-                <div class="container">
-                    <div class="row g-4 align-items-stretch">
-                        <div class="col-lg-4">
-                            <div class="tall-panel">
-                                <span class="eyebrow">Why choose us</span>
-                                <h2 class="section-title">Structured delivery, not generic manpower supply.</h2>
-                                <p class="section-copy">Clear scopes, accountable site teams and operational discipline for clients that need dependable execution.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row g-3">
-                                <?php foreach ($reasons as $index => $reason): ?>
-                                    <div class="col-md-6">
-                                        <div class="reason-card">
-                                            <span><?= str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) ?></span>
-                                            <p><?= htmlspecialchars($reason) ?></p>
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-<?php renderSiteEnd($company); ?>
+<section class="section section-soft">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="eyebrow">Working Method</p>
+            <h2>How we move from site requirement to dependable support.</h2>
+        </div>
+        <div class="process-grid">
+        <?php
+        $processSteps = [
+            ['title' => 'Listen', 'icon' => 'fa-solid fa-comments', 'text' => 'Understand site priorities and constraints.'],
+            ['title' => 'Analyze', 'icon' => 'fa-solid fa-magnifying-glass-chart', 'text' => 'Review manpower, equipment and technical risk.'],
+            ['title' => 'Plan', 'icon' => 'fa-solid fa-clipboard-list', 'text' => 'Define schedule, scope and reporting cadence.'],
+            ['title' => 'Execute', 'icon' => 'fa-solid fa-helmet-safety', 'text' => 'Mobilize disciplined teams for field delivery.'],
+            ['title' => 'Support', 'icon' => 'fa-solid fa-headset', 'text' => 'Close loops and respond to changing site needs.'],
+        ];
+        ?>
+        <?php foreach ($processSteps as $step): ?>
+            <article class="process-card reveal">
+                <span><i class="<?= e($step['icon']) ?>" aria-hidden="true"></i></span>
+                <h3><?= e($step['title']) ?></h3>
+                <p><?= e($step['text']) ?></p>
+            </article>
+        <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+<?php render_site_end($company, $navItems); ?>

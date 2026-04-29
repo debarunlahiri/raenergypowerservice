@@ -1,0 +1,174 @@
+.header-cta,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 18px;
+    border: 2px solid currentColor;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    line-height: 1;
+    transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.header-cta {
+    background: var(--amber);
+    color: var(--black);
+    border-color: var(--amber);
+}
+
+.btn:hover,
+.header-cta:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: #ffffff;
+    border-color: var(--blue);
+    background: var(--blue);
+}
+
+.btn-secondary {
+    color: #ffffff;
+    border-color: #ffffff;
+    background: transparent;
+}
+
+.timeline-card,
+.info-stack,
+.career-box,
+.contact-panel,
+.contact-form,
+.client-table-wrap {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.service-card,
+.why-card,
+.process-card,
+.service-detail,
+.team-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.service-card,
+.why-card,
+.process-card {
+    padding: 26px;
+}
+
+.service-card {
+    min-height: 300px;
+}
+
+.service-card h3,
+.why-card h3,
+.process-card h3,
+.service-detail h2,
+.team-card h2,
+.contact-form h2,
+.contact-panel h2,
+.client-table-wrap h2 {
+    margin: 18px 0 10px;
+    color: var(--ink);
+    font-size: 1.35rem;
+    line-height: 1.18;
+    font-weight: 800;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.service-card:hover,
+.why-card:hover,
+.process-card:hover,
+.team-card:hover,
+.gallery-item:hover {
+    transform: translateY(-4px);
+}
+
+.service-card,
+.why-card,
+.process-card,
+.team-card,
+.gallery-item {
+    transition: transform 180ms ease;
+}
+
+.icon-box {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    background: var(--teal);
+}
+
+.icon-box svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+.card-grid,
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.check-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 24px;
+    margin: 26px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--muted);
+}
+
+.check-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .48em;
+    width: 12px;
+    height: 12px;
+    background: var(--amber);
+}
+
+.back-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 40;
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: 2px solid var(--blue);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    background: var(--blue);
+    font-size: 1.35rem;
+}
+
+.back-top.is-visible {
+    display: block;
+}
