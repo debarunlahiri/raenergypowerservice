@@ -1,0 +1,370 @@
+@media (min-width: 576px) {
+    .col-sm-4 { flex: 0 0 auto; width: 33.333333%; }
+}
+
+@media (min-width: 768px) {
+    .col-md-6 { flex: 0 0 auto; width: 50%; }
+}
+
+@media (min-width: 992px) {
+    .flex-lg-row { flex-direction: row; }
+    .text-lg-end { text-align: right; }
+    .mt-lg-0 { margin-top: 0; }
+    .ms-lg-4 { margin-left: 1.5rem; }
+    .align-items-lg-center { align-items: center; }
+    .gap-lg-3 { gap: 1rem; }
+    .col-lg-4 { flex: 0 0 auto; width: 33.333333%; }
+    .col-lg-5 { flex: 0 0 auto; width: 41.666667%; }
+    .col-lg-7 { flex: 0 0 auto; width: 58.333333%; }
+    .col-lg-8 { flex: 0 0 auto; width: 66.666667%; }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-3 { flex: 0 0 auto; width: 25%; }
+}
+
+@media (max-width: 991.98px) {
+    .topbar {
+        display: none;
+    }
+
+    .main-nav .container {
+        position: relative;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        min-height: 72px;
+        padding-block: 0.7rem;
+        row-gap: 0.75rem;
+    }
+
+    .navbar-toggler {
+        display: none !important;
+        flex: 0 0 auto;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        position: static;
+        flex: 0 0 100%;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        gap: 0.75rem;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+        align-items: stretch;
+    }
+
+    .main-nav .nav-link {
+        display: flex;
+        padding: 0.35rem 0;
+        min-height: auto;
+        border-bottom: 2px solid transparent;
+        font-size: 0.94rem;
+    }
+
+    .main-nav .nav-item:last-child .nav-link {
+        border-bottom-color: transparent;
+    }
+
+    .nav-cta {
+        width: auto;
+        margin-top: 0;
+        min-height: 38px;
+        padding: 0.65rem 0.9rem;
+    }
+
+    .hero-section {
+        padding-top: 5rem;
+    }
+
+    .process-strip,
+    .hero-panel-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tall-panel .section-title,
+    .tall-panel .section-copy {
+        max-width: none;
+    }
+
+    .showcase-slide-grid {
+        display: block;
+    }
+
+    .showcase-carousel {
+        height: calc(100vh - 72px);
+        min-height: 700px;
+    }
+
+    .showcase-visual {
+        min-height: 0;
+        height: 100%;
+    }
+
+    .showcase-content {
+        width: min(100% - 2rem, 1200px);
+        padding: 5rem 0;
+        border-top: 0;
+    }
+
+    .showcase-content h2 {
+        max-width: 12ch;
+    }
+
+    .quality-service-tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quality-service-panel,
+    .quality-service-panel.is-active {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-visual {
+        min-height: 420px;
+    }
+
+    .target-mark {
+        left: 50%;
+        width: 240px;
+        height: 240px;
+        transform: translateX(-50%);
+    }
+
+    .target-mark span:nth-child(1) {
+        width: 176px;
+        height: 176px;
+    }
+
+    .target-mark span:nth-child(2) {
+        width: 122px;
+        height: 122px;
+    }
+
+    .target-mark span:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+
+    .target-arrow {
+        left: 48%;
+        width: 210px;
+    }
+
+    .mission-line,
+    .operator-mark {
+        display: none;
+    }
+
+    .values-map {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .value-node {
+        position: static;
+        width: auto;
+        min-height: 0;
+        grid-column: auto;
+        grid-row: auto;
+        padding: 1.2rem;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        box-shadow: none;
+        animation: none;
+    }
+
+    .value-node::before,
+    .value-node::after {
+        display: none;
+    }
+
+    .values-center-mark {
+        display: none;
+    }
+
+    .approach-map {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .approach-map::before,
+    .approach-map::after,
+    .approach-core {
+        display: none;
+    }
+
+    .approach-node {
+        position: static;
+        width: auto;
+        height: auto;
+        min-height: 128px;
+        border-radius: 8px;
+    }
+
+    .quality-service-visual {
+        min-height: 420px;
+        order: 2;
+    }
+
+    .quality-service-content {
+        order: 1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container,
+    .hero-carousel-section .container {
+        width: min(100% - 1.25rem, 1200px);
+    }
+
+    .section-space {
+        padding: 4rem 0;
+    }
+
+    .process-strip,
+    .hero-panel-grid,
+    .quality-service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-copy-item {
+        max-width: none;
+    }
+
+    .mission-visual {
+        min-height: 320px;
+    }
+
+    .target-mark {
+        width: 210px;
+        height: 210px;
+        border-width: 14px;
+    }
+
+    .target-mark span {
+        border-width: 14px;
+    }
+
+    .target-mark span:nth-child(1) {
+        width: 154px;
+        height: 154px;
+    }
+
+    .target-mark span:nth-child(2) {
+        width: 108px;
+        height: 108px;
+    }
+
+    .target-mark span:nth-child(3) {
+        width: 62px;
+        height: 62px;
+    }
+
+    .target-arrow {
+        left: 50%;
+        width: 160px;
+    }
+
+    .values-map,
+    .approach-map {
+        grid-template-columns: 1fr;
+    }
+
+    .value-node {
+        grid-template-columns: 62px minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .value-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 1.55rem;
+    }
+
+    .value-node h3 {
+        font-size: 1.25rem;
+    }
+
+    .showcase-carousel {
+        height: calc(100vh - 72px);
+        min-height: 640px;
+    }
+
+    .showcase-content {
+        width: min(100% - 1.25rem, 1200px);
+        padding: 4.25rem 0;
+    }
+
+    .showcase-actions {
+        align-items: flex-start;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 42px;
+        height: 42px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hero-section h1,
+    .section-title {
+        line-height: 1.02;
+    }
+
+    .process-strip div {
+        min-height: 124px;
+    }
+
+    .tall-panel {
+        padding: 1.45rem;
+    }
+
+    .team-photo {
+        width: 128px;
+        height: 128px;
+    }
+
+    .brand-copy small {
+        display: none;
+    }
+
+    .brand-mark {
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+
+    .brand-copy strong {
+        font-size: 1rem;
+        line-height: 1.1;
+        white-space: normal;
+    }
+
+    .navbar-brand {
+        max-width: 100%;
+    }
+
+    .client-table {
+        min-width: 1180px;
+    }
+}

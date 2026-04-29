@@ -1,0 +1,36 @@
+# macOS and editor files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+vendor/
+dist/
+build/
+
+# Logs and runtime cache
+*.log
+logs/
+cache/
+tmp/
+temp/
+
+# Local backups and archives
+*.bak
+*.backup
+*.zip
+*.tar
+*.tar.gz

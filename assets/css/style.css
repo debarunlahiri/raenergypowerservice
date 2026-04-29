@@ -1,0 +1,8 @@
+/*
+ * CSS is split by responsibility.
+ * Edit these files instead of growing this manifest:
+ * - base.css: variables, reset, layout helpers, header, buttons
+ * - home.css: homepage carousel, hero, mission, values, approach
+ * - pages.css: client/team/contact/footer/back-to-top shared sections
+ * - responsive.css: breakpoint overrides
+ */
