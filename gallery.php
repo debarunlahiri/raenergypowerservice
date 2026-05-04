@@ -5,7 +5,7 @@ require __DIR__ . '/includes/layout.php';
 render_site_start($company, $navItems, 'gallery', 'Gallery | ' . $company['name'], 'Industrial plant project and service gallery for R.A. Energy Power Service.');
 render_page_hero('Gallery', 'Field snapshots from industrial service environments.', 'Browse project, plant, erection and utility work images from R.A. Energy Power Service.');
 
-$galleryItems = array_values(array_unique(array_merge($projectImages, $galleryImages)));
+$galleryItems = $galleryImages;
 ?>
 <section class="section gallery-page-section">
     <div class="wrap">
@@ -14,7 +14,7 @@ $galleryItems = array_values(array_unique(array_merge($projectImages, $galleryIm
                 <p class="eyebrow">Project Visuals</p>
                 <h2>Industrial gallery</h2>
             </div>
-            <p><?= count($galleryItems) ?> images from site work, client projects and plant-side support activities.</p>
+            <p>Images from site work, client projects and plant-side support activities.</p>
         </div>
 
         <div class="gallery-grid gallery-lightbox-grid">

@@ -37,6 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.toggle("nav-open", Boolean(isOpen));
     });
 
+    document.addEventListener("click", (event) => {
+        if (!nav?.classList.contains("is-open")) return;
+        if (nav.contains(event.target) || navToggle?.contains(event.target)) return;
+        nav.classList.remove("is-open");
+        navToggle?.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+    });
+
     nav?.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
             nav.classList.remove("is-open");
@@ -86,6 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && nav?.classList.contains("is-open")) {
+            nav.classList.remove("is-open");
+            navToggle?.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("nav-open");
+        }
+
         if (!lightbox || lightbox.hidden) return;
         if (event.key === "Escape") closeLightbox();
         if (event.key === "ArrowLeft") setLightboxImage(activeLightbox - 1);

@@ -8,13 +8,27 @@ function e(string $value): string
 
 function render_site_start(array $company, array $navItems, string $activePage, string $title, string $description): void
 {
-    $stylesheets = [
+    $baseStylesheets = [
         'assets/css/base.css',
         'assets/css/layout.css',
         'assets/css/components.css',
-        'assets/css/pages.css',
-        'assets/css/responsive.css',
+        'assets/css/pages/common.css',
     ];
+    $pageStylesheets = [
+        'home' => ['assets/css/pages/home.css'],
+        'about' => ['assets/css/pages/about.css'],
+        'services' => ['assets/css/pages/services.css'],
+        'clients' => ['assets/css/pages/clients.css'],
+        'gallery' => ['assets/css/pages/gallery.css'],
+        'team' => ['assets/css/pages/team.css'],
+        'career' => ['assets/css/pages/career.css'],
+        'contact' => ['assets/css/pages/contact.css'],
+    ];
+    $stylesheets = array_merge(
+        $baseStylesheets,
+        $pageStylesheets[$activePage] ?? [],
+        ['assets/css/responsive.css']
+    );
     ?>
 <!doctype html>
 <html lang="en">
@@ -41,7 +55,7 @@ function render_site_start(array $company, array $navItems, string $activePage, 
                                 paper: '#ffffff',
                                 soft: '#f4f7fa',
                                 blue: '#174ea6',
-                                teal: '#00796b',
+                                teal: '#174ea6',
                                 amber: '#f2b705',
                                 red: '#c73e1d'
                             }
@@ -60,11 +74,7 @@ function render_site_start(array $company, array $navItems, string $activePage, 
 <body class="page-<?= e($activePage) ?>">
     <header class="site-header" data-header>
         <a class="brand" href="index.php" aria-label="<?= e($company['name']) ?>">
-            <span class="brand-mark">RA</span>
-            <span>
-                <strong><?= e($company['short_name']) ?></strong>
-                <small>Power Service Pvt. Ltd.</small>
-            </span>
+            <img src="assets/images/logo.png" alt="<?= e($company['name']) ?>">
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -74,7 +84,7 @@ function render_site_start(array $company, array $navItems, string $activePage, 
                 <a class="<?= $activePage === $key ? 'is-active' : '' ?>" href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a>
             <?php endforeach; ?>
         </nav>
-        <a class="header-cta" href="tel:+919038028888">Request Call</a>
+        <a class="header-cta" href="contact.php?request=call">Request Call</a>
     </header>
     <main>
     <?php

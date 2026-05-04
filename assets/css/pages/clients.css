@@ -1,0 +1,125 @@
+.client-table {
+    display: grid;
+}
+
+.client-table-wrap {
+    padding: clamp(22px, 4vw, 36px);
+}
+
+.client-table article {
+    display: grid;
+    grid-template-columns: 1.3fr .85fr 1fr .75fr;
+    gap: 18px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+}
+
+.client-table span {
+    color: var(--muted);
+}
+
+.clients-section {
+    background: var(--soft);
+}
+
+.clients-table-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.clients-table-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .55fr);
+    gap: 24px;
+    align-items: end;
+    padding: clamp(24px, 4vw, 38px);
+    border-bottom: 1px solid var(--line);
+}
+
+.clients-table-head h2 {
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1;
+    font-weight: 800;
+}
+
+.clients-table-head > p {
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.clients-table-scroll {
+    overflow-x: auto;
+}
+
+.clients-table {
+    width: 100%;
+    min-width: 1120px;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: var(--ink);
+}
+
+.clients-table th,
+.clients-table td {
+    padding: 16px 18px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.clients-table th:last-child,
+.clients-table td:last-child {
+    border-right: 0;
+}
+
+.clients-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.clients-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: #ffffff;
+    background: var(--black);
+    font-size: .86rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.clients-table tbody tr:nth-child(even) {
+    background: #fbfcfe;
+}
+
+.clients-table tbody tr:hover {
+    background: #eef6f5;
+}
+
+.clients-table td:first-child,
+.clients-table th:first-child {
+    width: 84px;
+    text-align: center;
+}
+
+.clients-table td:first-child {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.clients-table td:nth-child(2) {
+    width: 46%;
+    font-weight: 700;
+}
+
+.clients-table td:nth-child(3),
+.clients-table td:nth-child(4),
+.clients-table td:nth-child(5) {
+    color: var(--muted);
+    font-weight: 650;
+}

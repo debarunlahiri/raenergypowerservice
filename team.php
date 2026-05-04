@@ -7,9 +7,9 @@ render_page_hero('Our Team', 'Experienced leadership for disciplined industrial 
 ?>
 <section class="section">
     <div class="wrap team-grid">
-        <?php foreach ($team as $member): ?>
+        <?php foreach ($team as $index => $member): ?>
             <article class="team-card reveal">
-                <img src="<?= e($member['image']) ?>" alt="<?= e($member['name']) ?>" loading="lazy">
+                <img class="team-photo-<?= $index + 1 ?>" src="<?= e($member['image']) ?>" alt="<?= e($member['name']) ?>" loading="lazy">
                 <div>
                     <h2><?= e($member['name']) ?></h2>
                     <p><?= e($member['role']) ?></p>

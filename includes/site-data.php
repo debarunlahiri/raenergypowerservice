@@ -205,25 +205,32 @@ function asset_list(string $folder): array
 $galleryImages = asset_list('assets/images/gallery');
 $projectImages = asset_list('assets/images/projects');
 $clientLogos = asset_list('assets/images/clients');
+$carouselImages = asset_list('assets/images/carousel');
 
 $heroSlides = [
     [
-        'image' => $galleryImages[0] ?? 'assets/images/hero.jpg',
+        'image' => $carouselImages[0] ?? 'assets/images/hero.jpg',
         'eyebrow' => 'Plant Operations',
         'title' => 'Complete Operation & Maintenance of Power Plants',
         'text' => 'Disciplined teams for boiler, turbine and utility systems across continuous industrial environments.',
     ],
     [
-        'image' => $galleryImages[1] ?? 'assets/images/2.jpg',
+        'image' => $carouselImages[1] ?? 'assets/images/2.jpg',
         'eyebrow' => 'Industrial Execution',
         'title' => 'Heavy Erection with Site-Ready Supervision',
         'text' => 'Equipment, structure and utility-side erection support backed by practical field coordination.',
     ],
     [
-        'image' => $galleryImages[2] ?? 'assets/images/image_bg.jpg',
+        'image' => $carouselImages[2] ?? 'assets/images/image_bg.jpg',
         'eyebrow' => 'Utility Systems',
         'title' => 'Water Treatment Support for Reliable Output',
         'text' => 'Monitoring, chemical discipline and operating routines for dependable plant-side utilities.',
+    ],
+    [
+        'image' => $carouselImages[3] ?? 'assets/images/image_bg.jpg',
+        'eyebrow' => 'Field Support',
+        'title' => 'Industrial Teams Built for Site Conditions',
+        'text' => 'Reliable manpower, supervision and reporting support for power and process plant requirements.',
     ],
 ];
 ?>
