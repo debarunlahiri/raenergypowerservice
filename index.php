@@ -88,7 +88,7 @@ render_site_start($company, $navItems, 'home', $company['name'] . ' | Industrial
             <p class="eyebrow">Field Execution</p>
             <h2>Industrial power support with urgency, supervision and measurable site discipline.</h2>
             <div class="home-intro-panel">
-                <p>From boiler operation to heavy erection and utility systems, R.A. Energy places trained teams where downtime is expensive and execution has to stay controlled.</p>
+                <p>From boiler operation to heavy erection and utility systems, RN Energy places trained teams where downtime is expensive and execution has to stay controlled.</p>
                 <div class="home-intro-tags">
                     <span>Shift operation</span>
                     <span>Preventive maintenance</span>
@@ -145,7 +145,7 @@ render_site_start($company, $navItems, 'home', $company['name'] . ' | Industrial
             <div class="footprint-copy">
                 <p class="eyebrow">Company Footprint</p>
                 <h2>Established in India, expanded for Nepal, built around industrial uptime.</h2>
-                <p class="lead">R.A. Energy Power Service supports power and process plants with trained teams for operations, maintenance, erection and connected utility systems.</p>
+                <p class="lead">RN Energy Power Service supports power and process plants with trained teams for operations, maintenance, erection and connected utility systems.</p>
             </div>
         </div>
         <div class="timeline-card">
@@ -161,7 +161,7 @@ render_site_start($company, $navItems, 'home', $company['name'] . ' | Industrial
         <div class="why-intro reveal">
             <p class="eyebrow">Why Us</p>
             <h2>Industrial sites need control, not promises.</h2>
-            <p>R.A. Energy combines practical supervision, accountable communication, scheduling discipline and a field network that can support active plant conditions.</p>
+            <p>RN Energy combines practical supervision, accountable communication, scheduling discipline and a field network that can support active plant conditions.</p>
             <div class="why-signal-row" aria-label="Operational strengths">
                 <span>Supervision</span>
                 <span>Safety</span>
@@ -226,7 +226,7 @@ render_site_start($company, $navItems, 'home', $company['name'] . ' | Industrial
         <div class="home-project-grid">
             <?php foreach ($projectImages as $index => $image): ?>
                 <figure class="home-project-card reveal">
-                    <img src="<?= e($image) ?>" alt="R.A. Energy project image <?= $index + 1 ?>" loading="lazy">
+                    <img src="<?= e($image) ?>" alt="RN Energy project image <?= $index + 1 ?>" loading="lazy">
                 </figure>
             <?php endforeach; ?>
         </div>

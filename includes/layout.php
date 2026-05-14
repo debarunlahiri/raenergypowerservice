@@ -131,8 +131,9 @@ function render_site_end(array $company, array $navItems): void
             </div>
             <div>
                 <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Offices</span></h3>
-                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong>Varanasi, India</strong><br><?= e($company['regional_office']) ?></span></p>
-                <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong>Nawalparasi, Nepal</strong><br><?= e($company['registered_office']) ?></span></p>
+                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong><?= e($company['india_name']) ?></strong><br><?= e($company['regional_office']) ?></span></p>
+                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong>Gujarat Branch Office</strong><br><?= e($company['gujarat_branch_office']) ?></span></p>
+                <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong><?= e($company['nepal_name']) ?></strong><br><?= e($company['registered_office']) ?></span></p>
             </div>
             <div>
                 <h3><i class="fa-solid fa-link" aria-hidden="true"></i><span>Quick Links</span></h3>

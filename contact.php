@@ -2,7 +2,7 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-render_site_start($company, $navItems, 'contact', 'Contact | ' . $company['name'], 'Request a call or contact R.A. Energy Power Service for power plant operation, maintenance and industrial utility support.');
+render_site_start($company, $navItems, 'contact', 'Contact | ' . $company['name'], 'Request a call or contact RN Energy Power Service for power plant operation, maintenance and industrial utility support.');
 render_page_hero('Contact', 'Request a call from our industrial service team.', 'Share your requirement or contact our offices directly for operation, maintenance, erection and utility support.');
 ?>
 <section class="section">
@@ -40,11 +40,15 @@ render_page_hero('Contact', 'Request a call from our industrial service team.', 
                 <p><a href="mailto:<?= e($company['email']) ?>"><?= e($company['email']) ?></a></p>
             </article>
             <article>
-                <strong>India Office</strong>
+                <strong><?= e($company['india_name']) ?></strong>
                 <p><?= e($company['regional_office']) ?></p>
             </article>
             <article>
-                <strong>Nepal Office</strong>
+                <strong>Gujarat Branch Office</strong>
+                <p><?= e($company['gujarat_branch_office']) ?></p>
+            </article>
+            <article>
+                <strong><?= e($company['nepal_name']) ?></strong>
                 <p><?= e($company['registered_office']) ?></p>
             </article>
             <article>

@@ -26,14 +26,14 @@ body:not(.page-home) .site-header {
 .brand {
     display: inline-flex;
     align-items: center;
-    min-width: 360px;
+    min-width: 118px;
 }
 
 .brand img {
     display: block;
-    width: min(360px, 62vw);
-    height: auto;
-    max-height: 62px;
+    width: auto;
+    height: clamp(88px, 7.8vw, 112px);
+    max-width: min(132px, 24vw);
     object-fit: contain;
 }
 

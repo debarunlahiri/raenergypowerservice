@@ -1,7 +1,9 @@
 <?php
 $company = [
-    'name' => 'R.A. Energy Power Service Pvt. Ltd.',
-    'short_name' => 'R.A. Energy',
+    'name' => 'RN Energy Power Service',
+    'short_name' => 'RN Energy',
+    'india_name' => 'RN Energy Power Service (India)',
+    'nepal_name' => 'RN Energy Power Service Private Limited (Nepal)',
     'tagline' => 'Operation, maintenance, erection and utility support for industrial power systems.',
     'phone_india' => '+91 9038028888',
     'phone_india_alt' => '+91 8527695761-70',
@@ -9,6 +11,7 @@ $company = [
     'email' => 'raenergypowerservice@gmail.com',
     'registered_office' => 'Sunwal-5 Bankatti, Nawalparasi, Nepal',
     'regional_office' => 'Flat No. E-11, Sairaj City Apartments, Nawalpur Road, Basahi, Varanasi, Pin 221003, India',
+    'gujarat_branch_office' => 'B-57, Sadbhavana City, Bhachua Kutch (Gujarat), 370140',
     'founded' => '2006 in India',
     'nepal_registration' => '2017 in Nepal',
     'hours' => 'Monday to Saturday, 9:00 AM to 6:00 PM',
@@ -123,7 +126,7 @@ $qualityServices = [
     [
         'title' => 'Power Plant Repairing & Service',
         'icon' => 'fa-solid fa-industry',
-        'copy' => 'The vision at R.A Energy power services pvt ltd, is of highly trained and efficient team of operation & maintenance ready for anything that may occur and quick respond to clients’ needs concerns.',
+        'copy' => 'The vision at RN Energy Power Service is of a highly trained and efficient team of operation and maintenance professionals ready for anything that may occur, with quick response to clients’ needs and concerns.',
         'lead' => 'Features',
         'features' => [
             'New Construction',

@@ -30,7 +30,7 @@ $jobOpenings = [
     ],
 ];
 
-render_site_start($company, $navItems, 'career', 'Career | ' . $company['name'], 'Career opportunities for associates, senior engineers and draftman roles at R.A. Energy Power Service.');
+render_site_start($company, $navItems, 'career', 'Career | ' . $company['name'], 'Career opportunities for associates, senior engineers and draftman roles at RN Energy Power Service.');
 render_page_hero('Career', 'Join our industrial power plant service team.', 'We welcome experienced associates who can support site execution, engineering coordination and technical documentation.');
 ?>
 <section class="section career-section">
@@ -38,7 +38,7 @@ render_page_hero('Career', 'Join our industrial power plant service team.', 'We 
         <div class="career-intro reveal">
             <p class="eyebrow">Job Category</p>
             <h2>Current openings for site associates.</h2>
-            <p class="lead">R.A. Energy Power Service is accepting career profiles for experienced site and technical professionals.</p>
+            <p class="lead">RN Energy Power Service is accepting career profiles for experienced site and technical professionals.</p>
         </div>
 
         <div class="career-openings">
@@ -63,7 +63,7 @@ render_page_hero('Career', 'Join our industrial power plant service team.', 'We 
             <h2>Drop your CV with your personal information.</h2>
             <p>Kindly send your CV to <a href="mailto:<?= e($careerEmail) ?>"><?= e($careerEmail) ?></a> with your personal information, experience details and preferred role.</p>
         </div>
-        <a class="btn btn-primary" href="mailto:<?= e($careerEmail) ?>?subject=Career%20Application%20-%20R.A.%20Energy">Send CV</a>
+        <a class="btn btn-primary" href="mailto:<?= e($careerEmail) ?>?subject=Career%20Application%20-%20RN%20Energy">Send CV</a>
     </div>
 </section>
 <?php render_site_end($company, $navItems); ?>

@@ -2,7 +2,7 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-render_site_start($company, $navItems, 'team', 'Our Team | ' . $company['name'], 'Leadership and technical team members at R.A. Energy Power Service.');
+render_site_start($company, $navItems, 'team', 'Our Team | ' . $company['name'], 'Leadership and technical team members at RN Energy Power Service.');
 render_page_hero('Our Team', 'Experienced leadership for disciplined industrial execution.', 'The team combines operational experience, mechanical supervision and technical advisory capability.');
 ?>
 <section class="section">
