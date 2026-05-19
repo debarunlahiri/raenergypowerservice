@@ -2,7 +2,7 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-render_site_start($company, $navItems, 'team', 'Our Team | ' . $company['name'], 'Leadership and technical team members at RN Energy Power Service.');
+render_site_start($company, $navItems, 'team', 'Our Team | ' . $company['name'], 'Leadership and technical team members at RA Energy Power Service.');
 render_page_hero('Our Team', 'Experienced leadership for disciplined industrial execution.', 'The team combines operational experience, mechanical supervision and technical advisory capability.');
 ?>
 <section class="section">
@@ -13,7 +13,9 @@ render_page_hero('Our Team', 'Experienced leadership for disciplined industrial 
                 <div>
                     <h2><?= e($member['name']) ?></h2>
                     <p><?= e($member['role']) ?></p>
-                    <a href="tel:<?= e(str_replace([' ', '-'], '', $member['phone'])) ?>"><?= e($member['phone']) ?></a>
+                    <?php if (trim($member['phone']) !== ''): ?>
+                        <a href="tel:<?= e(str_replace([' ', '-'], '', $member['phone'])) ?>"><?= e($member['phone']) ?></a>
+                    <?php endif; ?>
                 </div>
             </article>
         <?php endforeach; ?>

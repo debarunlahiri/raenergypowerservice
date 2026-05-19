@@ -1,9 +1,9 @@
 <?php
 $company = [
-    'name' => 'RN Energy Power Service',
-    'short_name' => 'RN Energy',
-    'india_name' => 'RN Energy Power Service (India)',
-    'nepal_name' => 'RN Energy Power Service Private Limited (Nepal)',
+    'name' => 'RA Energy Power Service',
+    'short_name' => 'RA Energy',
+    'india_name' => 'RA Energy Power Service (India)',
+    'nepal_name' => 'RA Energy Power Service Private Limited (Nepal)',
     'tagline' => 'Operation, maintenance, erection and utility support for industrial power systems.',
     'phone_india' => '+91 9038028888',
     'phone_india_alt' => '+91 8527695761-70',
@@ -126,7 +126,7 @@ $qualityServices = [
     [
         'title' => 'Power Plant Repairing & Service',
         'icon' => 'fa-solid fa-industry',
-        'copy' => 'The vision at RN Energy Power Service is of a highly trained and efficient team of operation and maintenance professionals ready for anything that may occur, with quick response to clients’ needs and concerns.',
+        'copy' => 'The vision at RA Energy Power Service is of a highly trained and efficient team of operation and maintenance professionals ready for anything that may occur, with quick response to clients’ needs and concerns.',
         'lead' => 'Features',
         'features' => [
             'New Construction',
@@ -166,9 +166,10 @@ $qualityServices = [
 
 $team = [
     ['name' => 'Randhir Singh', 'role' => 'Founder', 'phone' => '+91 7266028888', 'image' => 'assets/images/randhir_singh.jpg'],
-    ['name' => 'Rakesh Singh', 'role' => 'Co-Founder', 'phone' => '+91 9038018888', 'image' => 'assets/images/rakesh_singh.jpg'],
-    ['name' => 'Bheem Soni', 'role' => 'Mechanical Executive', 'phone' => '+91 9559337735', 'image' => 'assets/images/bheem_soni.jpg'],
-    ['name' => 'Amit Agnihotri', 'role' => 'Technical Advisor', 'phone' => '+91 7572075150', 'image' => 'assets/images/amit_agnihotri.jpg'],
+    ['name' => 'Rakesh Singh', 'role' => 'Co-Founder', 'phone' => '+91 9038018888', 'image' => 'assets/images/teams/rakesh_singh.jpeg'],
+    ['name' => 'Bheem Soni', 'role' => 'Technical Head (BOE)', 'phone' => '+91 9559337735', 'image' => 'assets/images/teams/bhim_soni.jpeg'],
+    ['name' => 'Amit Agnihotri', 'role' => 'Technical Advisor', 'phone' => '+91 7572075150', 'image' => 'assets/images/teams/amit_agnihotri.jpeg'],
+    ['name' => 'Ali Raza Khan', 'role' => 'Human Resources & Administration head', 'phone' => '', 'image' => 'assets/images/teams/ali_raza_khan.jpeg'],
 ];
 
 $clients = [
@@ -195,6 +196,23 @@ $clients = [
     ['sr' => '21', 'name' => 'Raj Brewery Pvt. Ltd., Parasi, Nepal', 'maker' => 'Thermax boiler', 'boiler' => '11 TPH, 69 kg/cm2', 'turbine' => '-'],
     ['sr' => '22', 'name' => 'Ten Star Food Pvt. Ltd. (Nepal)', 'maker' => 'IBL boiler', 'boiler' => '5 TPH / 10 kg/cm2', 'turbine' => '-'],
     ['sr' => '23', 'name' => 'Dhanlaxmi Pepar Pvt. Ltd. (Dongargaw Rajnand Ganwo) Chhattisgarh', 'maker' => 'Chima boiler', 'boiler' => '15 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '24', 'name' => 'IPCA Laboratories, Ratlam', 'maker' => 'Thermax', 'boiler' => '8 TPH / 17.5 kg/cm2', 'turbine' => '250 KV'],
+    ['sr' => '25', 'name' => 'Boiplus Life Science (Tamilnadu)', 'maker' => 'Thermax', 'boiler' => '4+4 TPH', 'turbine' => '-'],
+    ['sr' => '26', 'name' => 'Deesan Cotex Pvt. Ltd., Shirpur, Maharashtra', 'maker' => 'Thermax', 'boiler' => '12 TPH and 6 TPH / 10 kg/cm2', 'turbine' => '-'],
+    ['sr' => '27', 'name' => 'Ananya Papers Pvt. Ltd., Raipur, Chhattisgarh', 'maker' => 'Thermax boiler', 'boiler' => '18 TPH / 22 kg/cm2', 'turbine' => '800 KW back pressure'],
+    ['sr' => '28', 'name' => 'Lilabati Rice Mill, Jayrambati Bakura (W.B.)', 'maker' => 'IBL boiler', 'boiler' => '8 TPH / 10.55 kg/cm2', 'turbine' => '-'],
+    ['sr' => '29', 'name' => 'Jodhani Papers Pvt. Ltd., Thodballapur, Bangalore', 'maker' => 'Thermax boiler', 'boiler' => '16 TPH / 10.5 kg/cm2', 'turbine' => '-'],
+    ['sr' => '30', 'name' => 'VVG Paper Pvt. Ltd., Hosur, Tamilnadu', 'maker' => 'Thermex boiler', 'boiler' => '15 TPH / 10.5 kg/cm2', 'turbine' => '-'],
+    ['sr' => '31', 'name' => 'Sunstr Bio-Polic Pvt. Ltd., Shirpur, Maharashtra', 'maker' => 'Thermodyne', 'boiler' => '30 TPH / 22 kg/cm2', 'turbine' => '-'],
+    ['sr' => '32', 'name' => 'Jalaram Rice Mill Pvt. Ltd., Nariyad, Gujarat', 'maker' => 'Chima boiler', 'boiler' => '20 TPH / 15 kg/cm2', 'turbine' => '-'],
+    ['sr' => '33', 'name' => 'Shaurya Cement Industries Ltd. (Nepal)', 'maker' => 'AQC & PH boiler China', 'boiler' => '15 TPH & 15 TPH', 'turbine' => '6 MW China turbine'],
+    ['sr' => '34', 'name' => 'Krfton Paper Pvt. Ltd., Hosur, Tamilnadu', 'maker' => 'Thermax', 'boiler' => '30 TPH / 45 kg/cm2', 'turbine' => '2.5 MW back pressure'],
+    ['sr' => '35', 'name' => 'Delight Agrico Pvt. Ltd., Delight Food, Bilaspur (Chhattisgarh)', 'maker' => 'IBL boiler', 'boiler' => '08 TPH', 'turbine' => '600 KW IB Turbo'],
+    ['sr' => '36', 'name' => 'Sanstar Boi Polic Ltd., Shirpur', 'maker' => 'Ashwani boiler', 'boiler' => '55 TPH', 'turbine' => '5 MW turbine'],
+    ['sr' => '37', 'name' => 'Everest Starch India Pvt. Ltd., Chotila (Gujarat)', 'maker' => 'Thermax', 'boiler' => '35 TPH / 12 TPH', 'turbine' => '3.5 MW back pressure'],
+    ['sr' => '38', 'name' => 'Krushna Cotex Pvt. Ltd. (Maharashtra)', 'maker' => 'Thermax', 'boiler' => '16.5 TPH', 'turbine' => '-'],
+    ['sr' => '39', 'name' => 'Unichem Laboratories Ltd., Indore (MP)', 'maker' => 'Thermax', 'boiler' => '8 TPH / 5 TPH', 'turbine' => '-'],
+    ['sr' => '40', 'name' => 'Unichem Laboratories Ltd., Goa', 'maker' => 'Thermax', 'boiler' => '6 TPH / 5 TPH', 'turbine' => '-'],
 ];
 
 function asset_list(string $folder): array

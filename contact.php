@@ -2,7 +2,7 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-render_site_start($company, $navItems, 'contact', 'Contact | ' . $company['name'], 'Request a call or contact RN Energy Power Service for power plant operation, maintenance and industrial utility support.');
+render_site_start($company, $navItems, 'contact', 'Contact | ' . $company['name'], 'Request a call or contact RA Energy Power Service for power plant operation, maintenance and industrial utility support.');
 render_page_hero('Contact', 'Request a call from our industrial service team.', 'Share your requirement or contact our offices directly for operation, maintenance, erection and utility support.');
 ?>
 <section class="section">

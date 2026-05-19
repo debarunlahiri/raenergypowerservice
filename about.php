@@ -33,15 +33,15 @@ $capabilities = [
     ['title' => 'Complete Solutions', 'icon' => 'fa-solid fa-bolt', 'text' => 'Integrated power plant support across operation, service and project scopes.'],
 ];
 
-render_site_start($company, $navItems, 'about', 'About Us | ' . $company['name'], 'Industrial operation, maintenance, heavy erection and water treatment support from RN Energy Power Service.');
-render_page_hero('About Us', 'Complete industrial power plant support since 2006.', 'RN Energy Power Service is built around operation, maintenance, heavy erection, water treatment and complete power plant solutions across India and Nepal.');
+render_site_start($company, $navItems, 'about', 'About Us | ' . $company['name'], 'Industrial operation, maintenance, heavy erection and water treatment support from RA Energy Power Service.');
+render_page_hero('About Us', 'Complete industrial power plant support since 2006.', 'RA Energy Power Service is built around operation, maintenance, heavy erection, water treatment and complete power plant solutions across India and Nepal.');
 ?>
 <section class="section about-showcase-section">
     <div class="wrap about-showcase">
         <div class="about-showcase-copy reveal">
-            <p class="eyebrow">About RN Energy Power Service</p>
+            <p class="eyebrow">About RA Energy Power Service</p>
             <h2>Industrial power support built around uptime, safety and fast site response.</h2>
-            <p class="lead">RN Energy Power Service was founded in India in 2006, and RN Energy Power Service Private Limited was registered in Nepal in 2017 to provide contract support for industrial operation, maintenance, heavy erection, water treatment and complete power plant solutions.</p>
+            <p class="lead">RA Energy Power Service was founded in India in 2006, and RA Energy Power Service Private Limited was registered in Nepal in 2017 to provide contract support for industrial operation, maintenance, heavy erection, water treatment and complete power plant solutions.</p>
             <p>Our team is structured for practical site execution, trained manpower, clear supervision and quick response to changing client needs.</p>
             <div class="about-actions">
                 <a class="btn btn-primary" href="services.php">Explore Services</a>
@@ -95,7 +95,7 @@ render_page_hero('About Us', 'Complete industrial power plant support since 2006
             <article class="vision-panel reveal">
                 <span class="about-panel-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></span>
                 <h3>Our Vision</h3>
-                <p>The vision at RN Energy Power Service is to maintain a highly trained and efficient operation and maintenance team ready for anything that may occur, with quick response to client needs and concerns.</p>
+                <p>The vision at RA Energy Power Service is to maintain a highly trained and efficient operation and maintenance team ready for anything that may occur, with quick response to client needs and concerns.</p>
             </article>
         </div>
     </div>

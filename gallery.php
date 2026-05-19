@@ -2,8 +2,8 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-render_site_start($company, $navItems, 'gallery', 'Gallery | ' . $company['name'], 'Industrial plant project and service gallery for RN Energy Power Service.');
-render_page_hero('Gallery', 'Field snapshots from industrial service environments.', 'Browse project, plant, erection and utility work images from RN Energy Power Service.');
+render_site_start($company, $navItems, 'gallery', 'Gallery | ' . $company['name'], 'Industrial plant project and service gallery for RA Energy Power Service.');
+render_page_hero('Gallery', 'Field snapshots from industrial service environments.', 'Browse project, plant, erection and utility work images from RA Energy Power Service.');
 
 $galleryItems = $galleryImages;
 ?>
@@ -20,7 +20,7 @@ $galleryItems = $galleryImages;
         <div class="gallery-grid gallery-lightbox-grid">
             <?php foreach ($galleryItems as $index => $image): ?>
                 <button class="gallery-item reveal" type="button" data-lightbox-index="<?= $index ?>" data-lightbox-src="<?= e($image) ?>" aria-label="Open gallery image <?= $index + 1 ?>">
-                    <img src="<?= e($image) ?>" alt="Industrial project work by RN Energy" loading="lazy">
+                    <img src="<?= e($image) ?>" alt="Industrial project work by RA Energy" loading="lazy">
                     <span><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
                 </button>
             <?php endforeach; ?>

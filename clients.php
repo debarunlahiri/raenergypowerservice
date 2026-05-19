@@ -2,7 +2,7 @@
 require __DIR__ . '/includes/site-data.php';
 require __DIR__ . '/includes/layout.php';
 
-render_site_start($company, $navItems, 'clients', 'Clients | ' . $company['name'], 'Client references and boiler, turbine, and industrial plant service capacity table for RN Energy Power Service.');
+render_site_start($company, $navItems, 'clients', 'Clients | ' . $company['name'], 'Client references and boiler, turbine, and industrial plant service capacity table for RA Energy Power Service.');
 render_page_hero('Clients', 'Client references across boiler, turbine and industrial utility work.', 'A detailed record of completed and supported plant-side work across India and Nepal.');
 ?>
 <section class="section clients-section">
