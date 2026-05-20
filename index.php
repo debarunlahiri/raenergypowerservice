@@ -24,30 +24,6 @@ render_site_start($company, $navItems, 'home', $company['name'] . ' | Industrial
                     </div>
                 </div>
 
-                <aside class="hero-command" aria-label="Service readiness summary">
-                    <div class="hero-command-top">
-                        <span>Site-ready team</span>
-                        <strong>24 hr</strong>
-                    </div>
-                    <div class="hero-gauge">
-                        <span style="--level: 92%"></span>
-                    </div>
-                    <dl>
-                        <div>
-                            <dt>Boiler</dt>
-                            <dd>IBR operators</dd>
-                        </div>
-                        <div>
-                            <dt>Turbine</dt>
-                            <dd>O&M support</dd>
-                        </div>
-                        <div>
-                            <dt>Utilities</dt>
-                            <dd>Water treatment</dd>
-                        </div>
-                    </dl>
-                    <a href="contact.php">Plan a mobilization</a>
-                </aside>
             </div>
         </article>
     <?php endforeach; ?>

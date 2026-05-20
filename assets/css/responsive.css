@@ -70,7 +70,12 @@
 
     .brand img {
         height: clamp(72px, 12vw, 86px);
-        max-width: calc(100vw - 112px);
+        max-width: min(108px, 24vw);
+    }
+
+    .brand-name {
+        max-width: min(300px, calc(100vw - 196px));
+        font-size: clamp(.95rem, 3.2vw, 1.2rem);
     }
 
     .header-cta {
@@ -233,6 +238,11 @@
     .brand img {
         height: clamp(64px, 17vw, 76px);
     }
+
+    .brand-name {
+        max-width: calc(100vw - 182px);
+        font-size: .95rem;
+    }
 }
 
 @media (max-width: 720px) {
@@ -262,25 +272,6 @@
 
     .hero-panel p:not(.eyebrow) {
         font-size: 1rem;
-    }
-
-    .hero-command {
-        align-self: auto;
-        margin-top: 0;
-        padding: 18px;
-        transform: translateY(18px);
-    }
-
-    .hero-slide.is-active .hero-command {
-        transform: translateY(0);
-    }
-
-    .hero-command-top strong {
-        font-size: 2.35rem;
-    }
-
-    .hero-command dl div {
-        grid-template-columns: 82px minmax(0, 1fr);
     }
 
     .hero-service-strip {
@@ -548,10 +539,6 @@
 
     .hero-proof-row span {
         width: 100%;
-    }
-
-    .hero-command {
-        display: none;
     }
 
     .home-intro-copy h2 {

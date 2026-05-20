@@ -75,6 +75,7 @@ function render_site_start(array $company, array $navItems, string $activePage, 
     <header class="site-header" data-header>
         <a class="brand" href="index.php" aria-label="<?= e($company['name']) ?>">
             <img src="assets/images/logo.png" alt="<?= e($company['name']) ?>">
+            <span class="brand-name"><?= e($company['name']) ?></span>
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -143,6 +144,10 @@ function render_site_end(array $company, array $navItems): void
                     <?php endforeach; ?>
                 </div>
             </div>
+        </div>
+        <div class="wrap footer-bottom">
+            <p>&copy; <?= date('Y') ?> <?= e($company['name']) ?>. All rights reserved.</p>
+            <p>Designed and Developed by <a href="https://techproitsolutions.in/" target="_blank" rel="noopener">Techpro IT Solutions</a></p>
         </div>
     </footer>
     <button class="back-top" type="button" data-back-top aria-label="Back to top">↑</button>
