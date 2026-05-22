@@ -15,7 +15,7 @@ render_site_start($company, $navItems, 'home', $company['name'] . ' | Industrial
                     <p><?= e($slide['text']) ?></p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="services.php">Explore Services</a>
-                        <a class="btn btn-secondary" href="tel:+919038028888">Discuss Requirement</a>
+                        <a class="btn btn-secondary" href="tel:+919038018888">Discuss Requirement</a>
                     </div>
                     <div class="hero-proof-row" aria-label="Company proof points">
                         <span><strong>500+</strong> projects</span>

@@ -5,10 +5,11 @@ $company = [
     'india_name' => 'RA Energy Power Service (India)',
     'nepal_name' => 'RA Energy Power Service Private Limited (Nepal)',
     'tagline' => 'Operation, maintenance, erection and utility support for industrial power systems.',
-    'phone_india' => '+91 9038028888',
-    'phone_india_alt' => '+91 8527695761-70',
+    'phone_india' => '+91 9038018888',
+    'phone_india_alt' => '+91 9038028888',
     'phone_nepal' => '+977 9806925595',
-    'email' => 'raenergypowerservice@gmail.com',
+    'phone_nepal_alt' => '+977 7572075150',
+    'email' => 'hr@raeps.in',
     'registered_office' => 'Sunwal-5 Bankatti, Nawalparasi, Nepal',
     'regional_office' => 'Flat No. E-11, Sairaj City Apartments, Nawalpur Road, Basahi, Varanasi, Pin 221003, India',
     'gujarat_branch_office' => 'B-57, Sadbhavana City, Bhachua Kutch (Gujarat), 370140',
@@ -168,7 +169,7 @@ $team = [
     ['name' => 'Randhir Singh', 'role' => 'Founder', 'phone' => '+91 7266028888', 'image' => 'assets/images/randhir_singh.jpg'],
     ['name' => 'Rakesh Singh', 'role' => 'Co-Founder', 'phone' => '+91 9038018888', 'image' => 'assets/images/teams/rakesh_singh.jpeg'],
     ['name' => 'Bheem Soni', 'role' => 'Technical Head (BOE)', 'phone' => '+91 9559337735', 'image' => 'assets/images/teams/bhim_soni.jpeg'],
-    ['name' => 'Amit Agnihotri', 'role' => 'Technical Advisor', 'phone' => '+91 7572075150', 'image' => 'assets/images/teams/amit_agnihotri.jpeg'],
+    ['name' => 'Amit Agnihotri', 'role' => 'Technical Advisor', 'phone' => '+977 7572075150', 'image' => 'assets/images/teams/amit_agnihotri.jpeg'],
     ['name' => 'Ali Raza Khan', 'role' => 'Human Resources & Administration head', 'phone' => '', 'image' => 'assets/images/teams/ali_raza_khan.jpeg'],
 ];
 

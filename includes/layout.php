@@ -126,15 +126,18 @@ function render_site_end(array $company, array $navItems): void
                 <h2><?= e($company['name']) ?></h2>
                 <p class="footer-line"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span><?= e($company['tagline']) ?></span></p>
                 <div class="footer-contact">
-                    <a href="tel:+919038028888"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><?= e($company['phone_india']) ?></span></a>
+                    <a href="tel:+919038018888"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><?= e($company['phone_india']) ?></span></a>
+                    <a href="tel:+919038028888"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><?= e($company['phone_india_alt']) ?></span></a>
+                    <a href="tel:+9779806925595"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><?= e($company['phone_nepal']) ?></span></a>
+                    <a href="tel:+9777572075150"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><?= e($company['phone_nepal_alt']) ?></span></a>
                     <a href="mailto:<?= e($company['email']) ?>"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span><?= e($company['email']) ?></span></a>
                 </div>
             </div>
             <div>
                 <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Offices</span></h3>
-                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong><?= e($company['india_name']) ?></strong><br><?= e($company['regional_office']) ?></span></p>
+                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong><?= e($company['india_name']) ?></strong><br><?= e($company['regional_office']) ?><br><a href="tel:+919038018888"><?= e($company['phone_india']) ?></a> | <a href="tel:+919038028888"><?= e($company['phone_india_alt']) ?></a></span></p>
                 <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong>Gujarat Branch Office</strong><br><?= e($company['gujarat_branch_office']) ?></span></p>
-                <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong><?= e($company['nepal_name']) ?></strong><br><?= e($company['registered_office']) ?></span></p>
+                <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong><?= e($company['nepal_name']) ?></strong><br><?= e($company['registered_office']) ?><br><a href="tel:+9779806925595"><?= e($company['phone_nepal']) ?></a> | <a href="tel:+9777572075150"><?= e($company['phone_nepal_alt']) ?></a></span></p>
             </div>
             <div>
                 <h3><i class="fa-solid fa-link" aria-hidden="true"></i><span>Quick Links</span></h3>
