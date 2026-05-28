@@ -31,15 +31,6 @@ render_page_hero('Contact', 'Request a call from our industrial service team.', 
         <aside class="contact-panel reveal">
             <h2>Contact Details</h2>
             <article>
-                <strong>Main Office</strong>
-                <p><a href="tel:+919038018888"><?= e($company['phone_india']) ?></a></p>
-                <p><a href="tel:+919038028888"><?= e($company['phone_india_alt']) ?></a></p>
-            </article>
-            <article>
-                <strong>Email</strong>
-                <p><a href="mailto:<?= e($company['email']) ?>"><?= e($company['email']) ?></a></p>
-            </article>
-            <article>
                 <strong><?= e($company['india_name']) ?></strong>
                 <p><?= e($company['regional_office']) ?></p>
                 <p><a href="tel:+919038018888"><?= e($company['phone_india']) ?></a></p>
@@ -54,6 +45,10 @@ render_page_hero('Contact', 'Request a call from our industrial service team.', 
                 <p><?= e($company['registered_office']) ?></p>
                 <p><a href="tel:+9779806925595"><?= e($company['phone_nepal']) ?></a></p>
                 <p><a href="tel:+9777572075150"><?= e($company['phone_nepal_alt']) ?></a></p>
+            </article>
+            <article>
+                <strong>Email</strong>
+                <p><a href="mailto:<?= e($company['email']) ?>"><?= e($company['email']) ?></a></p>
             </article>
             <article>
                 <strong>Hours</strong>

@@ -37,6 +37,10 @@ function render_site_start(array $company, array $navItems, string $activePage, 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e($title) ?></title>
     <meta name="description" content="<?= e($description) ?>">
+    <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -85,7 +89,7 @@ function render_site_start(array $company, array $navItems, string $activePage, 
                 <a class="<?= $activePage === $key ? 'is-active' : '' ?>" href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a>
             <?php endforeach; ?>
         </nav>
-        <a class="header-cta" href="contact.php?request=call">Request Call</a>
+        <a class="header-cta" href="contact.php?request=call">Contact Us</a>
     </header>
     <main>
     <?php
@@ -135,9 +139,20 @@ function render_site_end(array $company, array $navItems): void
             </div>
             <div>
                 <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Offices</span></h3>
-                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong><?= e($company['india_name']) ?></strong><br><?= e($company['regional_office']) ?><br><a href="tel:+919038018888"><?= e($company['phone_india']) ?></a> | <a href="tel:+919038028888"><?= e($company['phone_india_alt']) ?></a></span></p>
-                <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong>Gujarat Branch Office</strong><br><?= e($company['gujarat_branch_office']) ?></span></p>
-                <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong><?= e($company['nepal_name']) ?></strong><br><?= e($company['registered_office']) ?><br><a href="tel:+9779806925595"><?= e($company['phone_nepal']) ?></a> | <a href="tel:+9777572075150"><?= e($company['phone_nepal_alt']) ?></a></span></p>
+                <div class="footer-office">
+                    <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong><?= e($company['india_name']) ?></strong></span></p>
+                    <p class="footer-line footer-line-sub"><span><?= e($company['regional_office']) ?></span></p>
+                    <p class="footer-line footer-line-sub"><span><a href="tel:+919038018888"><?= e($company['phone_india']) ?></a> | <a href="tel:+919038028888"><?= e($company['phone_india_alt']) ?></a></span></p>
+                </div>
+                <div class="footer-office">
+                    <p class="footer-line"><i class="fa-solid fa-building" aria-hidden="true"></i><span><strong>Gujarat Branch Office</strong></span></p>
+                    <p class="footer-line footer-line-sub"><span><?= e($company['gujarat_branch_office']) ?></span></p>
+                </div>
+                <div class="footer-office">
+                    <p class="footer-line"><i class="fa-solid fa-industry" aria-hidden="true"></i><span><strong><?= e($company['nepal_name']) ?></strong></span></p>
+                    <p class="footer-line footer-line-sub"><span><?= e($company['registered_office']) ?></span></p>
+                    <p class="footer-line footer-line-sub"><span><a href="tel:+9779806925595"><?= e($company['phone_nepal']) ?></a> | <a href="tel:+9777572075150"><?= e($company['phone_nepal_alt']) ?></a></span></p>
+                </div>
             </div>
             <div>
                 <h3><i class="fa-solid fa-link" aria-hidden="true"></i><span>Quick Links</span></h3>

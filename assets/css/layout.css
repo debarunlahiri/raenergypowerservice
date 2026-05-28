@@ -162,7 +162,11 @@ body:not(.page-home) .site-header {
 .footer-contact,
 .footer-links {
     display: grid;
-    gap: 8px;
+    gap: 10px;
+}
+
+.footer-contact {
+    margin-top: 16px;
 }
 
 .footer-line,
@@ -204,4 +208,21 @@ body:not(.page-home) .site-header {
 .footer-bottom a {
     color: var(--amber);
     font-weight: 800;
+}
+
+.footer-office {
+    margin-bottom: 20px;
+}
+.footer-office:last-child {
+    margin-bottom: 0;
+}
+.footer-line-sub {
+    display: block;
+    padding-left: 32px;
+}
+
+.footer-office a:hover,
+.footer-contact a:hover {
+    color: var(--amber);
+    transition: color 160ms ease;
 }
