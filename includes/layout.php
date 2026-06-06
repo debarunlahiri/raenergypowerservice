@@ -72,7 +72,7 @@ function render_site_start(array $company, array $navItems, string $activePage, 
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <?php foreach ($stylesheets as $stylesheet): ?>
-        <link rel="stylesheet" href="<?= e($stylesheet) ?>?v=<?= (int) filemtime(__DIR__ . '/../' . $stylesheet) ?>">
+        <link rel="stylesheet" href="<?= e($stylesheet) ?>?v=1">
     <?php endforeach; ?>
 </head>
 <body class="page-<?= e($activePage) ?>">
@@ -169,7 +169,7 @@ function render_site_end(array $company, array $navItems): void
         </div>
     </footer>
     <button class="back-top" type="button" data-back-top aria-label="Back to top">↑</button>
-    <script src="assets/js/main.js?v=<?= (int) filemtime(__DIR__ . '/../assets/js/main.js') ?>"></script>
+    <script src="assets/js/main.js?v=1"></script>
 </body>
 </html>
     <?php
