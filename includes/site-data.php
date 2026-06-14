@@ -9,7 +9,7 @@ $company = [
     'phone_india_alt' => '+91 9038028888',
     'phone_nepal' => '+977 9806925595',
     'phone_nepal_alt' => '+91 7572075150',
-    'email' => 'hr@raeps.in',
+    'email' => 'contactus@raenergypowerservice.in',
     // Offices
     'registered_office' => 'Sunwal-5 Bankatti, Nawalparasi, Nepal',                // Nepal Head Office
     'regional_office' => 'Flat No. E-11, Sairaj City Apartments, Nawalpur Road, Basahi, Varanasi, Pin 221003, India', // India Main Office

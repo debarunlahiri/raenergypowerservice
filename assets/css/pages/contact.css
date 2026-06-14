@@ -13,7 +13,7 @@
 .field {
     position: relative;
     display: block;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .field input,
@@ -26,6 +26,7 @@
     padding: 22px 14px 10px;
     font: inherit;
     outline: 0;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
 }
 
 .field textarea {
@@ -38,12 +39,14 @@
     left: 14px;
     color: var(--muted);
     font-weight: 700;
-    transition: transform 140ms ease, font-size 140ms ease, color 140ms ease;
+    transition: transform 160ms ease, font-size 160ms ease, color 160ms ease;
+    pointer-events: none;
 }
 
 .field input:focus,
 .field textarea:focus {
     border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(23, 78, 166, 0.12);
 }
 
 .field input:focus + span,
@@ -55,12 +58,47 @@
     transform: translateY(-10px);
 }
 
-.field em {
-    display: block;
+/* Validation states */
+.field input.is-invalid,
+.field textarea.is-invalid {
+    border-color: var(--red) !important;
+    box-shadow: 0 0 0 3px rgba(199, 62, 29, 0.12) !important;
+}
+
+.field input.is-invalid + span,
+.field textarea.is-invalid + span {
+    color: var(--red) !important;
+}
+
+.field input.is-valid,
+.field textarea.is-valid {
+    border-color: #16a34a !important;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12) !important;
+}
+
+.field input.is-valid + span,
+.field textarea.is-valid + span {
+    color: #16a34a !important;
+}
+
+.field-error {
+    display: none;
     margin-top: 6px;
     color: var(--red);
-    font-style: normal;
+    font-size: .78rem;
     font-weight: 700;
+}
+
+.field-error.is-visible {
+    display: block;
+}
+
+.field-hint {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 600;
 }
 
 .form-alert {
@@ -72,10 +110,12 @@
 
 .form-alert.success {
     color: var(--teal);
+    background: rgba(23, 78, 166, 0.06);
 }
 
 .form-alert.error {
     color: var(--red);
+    background: rgba(199, 62, 29, 0.06);
 }
 
 .contact-panel article {
